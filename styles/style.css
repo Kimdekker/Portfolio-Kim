@@ -1,3 +1,138 @@
+
+@font-face {
+	/* For the headers and buttons*/
+	font-family: "KDHeaders";
+	src: url('../fonts/KD_hds-VariableFont_wght.ttf') format('truetype'), ;
+	font-weight: 400;
+	font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: -50;
+}
+
+@font-face {
+	/* For the body text */
+	font-family: "KDText";
+	src: url('../fonts/KD_txt-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-style: normal; 
+}
+
+
+@font-face {
+	/* For handwrite style text */
+	font-family: "KDHandwritten";
+	src: url('../fonts/KDhandwritten.ttf') format('truetype');
+    text-transform: uppercase;
+    letter-spacing: -50;
+}
+
+
+
+
 :root{
-    --color: #000;
+	--ff: 'KDText', sans-serif;
+	--ff-hdr: 'KDHeaders', sans-serif;
+    --ff-handwritten: 'KDHandwritten', sans-serif;
+
+
+	/* Font weights */
+    --fw-t: 200;
+	--fw-n: 400;
+	--fw-m: 600;
+	--fw-b: 800;
+
+	/* Font sizes */
+    --fs-p-sm: 1em;
+	--fs-p: 1.25em;
+    --fs-p-bg: 1.375em;
+
+    --fs-hdr: calc(var(--fs-p-sm) * 8);
+	--fs-1: calc(var(--fs-p-sm) * 8);
+	--fs-2: calc(var(--fs-p-sm) * 5);
+	--fs-3: calc(var(--fs-p-sm) * 4);
+	--fs-4: calc(var(--fs-p-sm) * 3);
+	--fs-5: calc(var(--fs-p-sm) * 2);
+	--fs-6: calc(var(--fs-p-sm) * 1.5);
+
+
+	/* Color scheme */
+    --primary-clr: #6747F0;
+    --primary-clr-tint1: #C6C1F2;
+    --primary-clr-tint2: #EDE9F3;
+
+    --bg-color: #FFFBF4;
+	--txt-clr-hds: #171614;
+	--txt-clr: #252325;
+
+	/* Spacers for margins, gaps or paddings */
+	--spacer: 1em;
+	--spacer-md: calc(var(--spacer) * 2);
+	--spacer-lg: calc(var(--spacer) * 3);
+    --spacer-xl: calc(var(--spacer) * 5);
+
+	/* Borders */
+	--border-sm: 2px solid var(--acent-clr);
+	--border-md: calc(var(--border-sm) * 3) solid var(--acent-clr);
+	--border-lg: calc(var(--border-sm) * 5) solid var(--acent-clr);
+
+	--border-sm-red: 1px solid var(--primary-clr);
+	--border-md-red: calc(var(--border-sm-red) * 3) solid var(--primary-clr);
+	--border-lg-red: calc(var(--border-sm-red) * 5) solid var(--primary-clr);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--ff);
+	color: var(--txt-clr);
+}
+
+h1 {
+	font-size: var(--fs-1);
+}
+
+h2 {
+	font-size: var(--fs-2);
+}
+
+h3 {
+	font-size: var(--fs-3);
+}
+
+h4 {
+	font-size: var(--fs-4);
+}
+
+h5 {
+	font-size: var(--fs-5);
+}
+
+h6 {
+	font-size: var(--fs-6);
+}
+
+p {
+	font-family: var(--ff);
+	color: var(--txt-clr);
+	font-size: var(--fs-p);
+	font-weight: var(--fw-n);
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+	:root{
+        --primary-clr: #6747F0;
+        /* undertints for black background > White gets black*/
+        --primary-clr-tint1: #433F43;
+        --primary-clr-tint2: #93908D;
+    
+         /* White goes to black, black goes to white */
+        --bg-color: #171614; 
+        --txt-clr-hds: #FFFBF4;
+        --txt-clr: #FFFBF4;
+	}
 }
