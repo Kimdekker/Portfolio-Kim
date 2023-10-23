@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.987" height="30.987" viewBox="0 0 30.987 30.987">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fffbf4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Icon_feather-sun" data-name="Icon feather-sun" transform="translate(1.878 4.589)">
+    <path id="Path_28" data-name="Path 28" class="cls-1" d="M22.829,16.665A6.165,6.165,0,1,1,16.665,10.5a6.165,6.165,0,0,1,6.165,6.165Z" transform="translate(1.555 -10.895)"/>
+    <path id="Path_35" data-name="Path 35" class="cls-1" d="M6.33,33.844l6.3-6.3" transform="translate(-3.538 -11.473)"/>
+    <path id="Path_36" data-name="Path 36" class="cls-1" d="M27.54,10.9,32.112,6.33" transform="translate(-16.485 11.47)"/>
+    <path id="Path_37" data-name="Path 37" class="cls-1" d="M27.54,10.9,32.112,6.33" transform="translate(-24.748 3.318)"/>
+    <path id="Path_38" data-name="Path 38" class="cls-1" d="M27.54,32.047,53.257,6.33" transform="matrix(0.035, -0.999, 0.999, 0.035, -6.971, 50.608)"/>
+  </g>
+</svg>
