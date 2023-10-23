@@ -1,3 +1,18 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+::selection {
+	color: var(--bg-color);
+	background: var(--primary-clr);
+}
+
+
 /***************/
 /* FONT FACES */
 /*************/
@@ -9,8 +24,6 @@
 	src: url('../fonts/KD_hds-VariableFont_wght.ttf') format('truetype'), ;
 	font-weight: 400;
 	font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: -50;
 }
 
 @font-face {
@@ -69,6 +82,8 @@
 	--txt-clr-hds: #171614;
 	--txt-clr: #252325;
 
+    --raster-clr: #00000007;
+
 	/* Spacers for margins, gaps or paddings */
 	--spacer: 1em;
 	--spacer-md: calc(var(--spacer) * 2);
@@ -76,14 +91,13 @@
     --spacer-xl: calc(var(--spacer) * 5);
 
 	/* Borders */
-	--border-sm: 2px solid var(--acent-clr);
-	--border-md: calc(var(--border-sm) * 3) solid var(--acent-clr);
-	--border-lg: calc(var(--border-sm) * 5) solid var(--acent-clr);
+	--border-sm: 1px solid var(--primary-clr);
+	--border: calc(var(--border-sm) * 2) solid var(--primary-clr);
 
-	--border-sm-red: 1px solid var(--primary-clr);
-	--border-md-red: calc(var(--border-sm-red) * 3) solid var(--primary-clr);
-	--border-lg-red: calc(var(--border-sm-red) * 5) solid var(--primary-clr);
+    --border-sm-grey: 1px solid var(--raster-clr);
+	--border-grey: calc(var(--border-sm-grey) * 2) solid var(--raster-clr);
 }
+
 
 
 /*******************/
@@ -98,6 +112,8 @@ h5,
 h6 {
 	font-family: var(--ff-hdr);
 	color: var(--txt-clr-hds);
+    letter-spacing: -50;
+    text-transform: uppercase;
 }
 
 h1 {
