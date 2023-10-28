@@ -117,6 +117,7 @@ h6 {
 	color: var(--txt-clr-hds);
     letter-spacing: -50;
     text-transform: uppercase;
+    line-height: 1em;
 }
 
 h1 {
@@ -213,7 +214,6 @@ body .cursor {
     pointer-events: none;
     left: -100px;
     top: 50%;
-    /* mix-blend-mode: difference; */
     background-color: var(--txt-clr);
     z-index: 10000;
     height: 1em;
@@ -258,7 +258,8 @@ header nav:first-of-type ul li button{
 }
 
 
-header nav:first-of-type ul li button:hover{
+header nav:first-of-type ul li button:hover,
+header nav:first-of-type ul li button:focus{
     background-color: var(--primary-clr);
 }
 
@@ -296,7 +297,7 @@ header nav:nth-of-type(2) ul{
     margin-right: var(--spacer-md);
 }
 
-header nav:nth-of-type(2) ul li a{
+header a{
     transition: 0.3s;
     background-image:
     linear-gradient(
@@ -314,11 +315,12 @@ header nav:nth-of-type(2) ul li a{
 
 
 
-header nav:nth-of-type(2) ul li a:hover{
+header a:hover,
+header a:focus {
     background-position:left bottom;
 }
 
-header nav:nth-of-type(2) ul li a::before {
+header a::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -332,7 +334,8 @@ header nav:nth-of-type(2) ul li a::before {
     transition: transform .3s ease-in-out;
   }
 
-header nav:nth-of-type(2) ul li a:hover::before {
+header a:hover::before,
+header a:focus::before {
     transform-origin: left;
     transform: scaleX(1) rotate(-2deg);
   }
@@ -372,14 +375,13 @@ header nav:nth-of-type(2) button span:nth-of-type(3) {
 }
 
 
-
-/* Class added = rotateplus  > See script.JS function rule 8/18*/
+/* Class added = rotateplus */
 header nav:nth-of-type(2) button:hover span:nth-of-type(1),
 header nav:nth-of-type(2) button:focus span:nth-of-type(1) {
 	width: 40%;
 }
 
-/* Class added = leave  > See script.JS function rule 8/18*/
+/* Class added = leave */
 header nav:nth-of-type(2) button:hover span:nth-of-type(2),
 header nav:nth-of-type(2) button:focus span:nth-of-type(2) {
 	width: 60%;
@@ -389,13 +391,18 @@ header nav:nth-of-type(2) button:focus span:nth-of-type(2) {
 /* When class is added (with the JS), dont change the :hover widht anymore */
 header nav:nth-of-type(2) button:hover span:nth-of-type(1).rotateplus,
 header nav:nth-of-type(2) button:focus span:nth-of-type(1).rotateplus {
-	width: 2.7em;
+	width: 76%;
 }
 
 /* When class is added (with the JS), dont change the :hover widht anymore */
 header nav:nth-of-type(2) button:hover span:nth-of-type(2).leave,
 header nav:nth-of-type(2) button:focus span:nth-of-type(2).leave {
 	width: 0%;
+}
+
+header nav:nth-of-type(2) button:hover span:nth-of-type(3).rotatemin,
+header nav:nth-of-type(2) button:focus span:nth-of-type(3).rotatemin {
+	width: 76%;
 }
 
 
@@ -410,7 +417,7 @@ header nav:nth-of-type(2) button:focus span:nth-of-type(2) {
 }
 
 header nav:nth-of-type(2) button:focus span:nth-of-type(1).rotateplus {
-	width: 2.7em;
+	width: 76%;
 }
 
 header nav:nth-of-type(2) button:focus span:nth-of-type(2).leave {
@@ -420,12 +427,10 @@ header nav:nth-of-type(2) button:focus span:nth-of-type(2).leave {
 
 .rotatemin {
 	transform: rotate(-45deg);
-	width: 2.7em;
 }
 
 .rotateplus {
 	transform: rotate(45deg);
-	width: 2.7em;
 }
 
 .leave {
@@ -434,10 +439,87 @@ header nav:nth-of-type(2) button:focus span:nth-of-type(2).leave {
 
 
 
-
 /* Menu behind button */
 
-header nav:last-of-type{
-    display: none;
+header nav:last-of-type {
+	display: flex;
+    flex-direction: row;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--bg-color);
+	translate: 100% 0%;
+    transition: 1s ease-in-out;
+    box-shadow: -16px 0px 26px 0px rgba(0,0,0,0.25);
 }
+
+
+header nav:last-of-type.showmenu {
+	translate: 65% 0%;
+}
+
+
+/* Marquee in menu */
+
+header nav:last-of-type div {
+    height: 100vh;
+    width: 3em;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--primary-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+header nav:last-of-type div > ul {
+    display: block;
+    height: 200%;
+    position: absolute;
+    overflow: hidden;
+    animation: marquee 5s linear infinite;
+    writing-mode: vertical-lr;
+}
+  
+header nav:last-of-type div > ul li {
+    float: left;
+    height: 50%;
+    text-orientation: mixed;
+    color: #C6C1F2;
+    font-family: var(--ff-hdr);
+    font-size: var(--fs-p);
+    text-transform: uppercase;
+}
+  
+
+@keyframes marquee {
+    0% { top: 0; }
+    100% { top: -100%; }
+  }
+
+
+
+/* Menu items in menu */
+
+header nav:last-of-type > ul{
+    padding: var(--spacer-lg);
+}
+
+header nav:last-of-type > ul li{
+    margin-bottom: var(--spacer-md);
+}
+
+
+header nav:last-of-type > ul li a{
+    font-size: var(--fs-4);
+}
+
+header nav:last-of-type > ul li a::before{
+    height: 8px;
+}
+
+
+
 
