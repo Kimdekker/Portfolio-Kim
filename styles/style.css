@@ -199,11 +199,22 @@ ul{
 /* BODY STYLING */
 /***************/
 
-body {
+body{
+    --lines: calc(8.3333333333% - 1px);
+    margin: 0em;
+    padding: 0em 3em;
+    background: repeating-linear-gradient(to left, var(--bg-color) 0 var(--lines), rgb(236, 232, 225) var(--lines) calc(var(--lines) + 1px))
+}
+
+
+body.darkmode{
+    --cal: calc(8.3333333333% - 1px);
     background-color: var(--bg-color);
     margin: 0em;
     padding: 0em 3em;
+    background: repeating-linear-gradient(to left, var(--bg-color) 0 var(--lines), rgb(38, 37, 34) var(--lines) calc(var(--lines) + 1px))
 }
+
 
 
 /* MOUSE */
