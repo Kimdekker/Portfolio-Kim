@@ -7,16 +7,6 @@ document.body.addEventListener("mousemove", function (e) {
 
 
 
-//Loader
-window.addEventListener('load', function() {
-    const loaderWrapper = document.querySelector('.loader-wrapper');
-
-    // Simulate loading time (in this case, 2.1 seconds)
-    setTimeout(function() {
-        loaderWrapper.classList.add('loaded');
-    }, 2100);
-});
-
 //Dark light mode toggle
 var darkModeSwitch = document.querySelector('header nav ul li:first-of-type button');
 
@@ -29,6 +19,8 @@ function switchTheme() {
   bodySwitchColor.classList.toggle('darkmode');
   iconDarkmode.classList.toggle('upsidedown');
 }
+
+
 
 
 //Reduced motion toogle
