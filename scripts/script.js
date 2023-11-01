@@ -33,7 +33,7 @@ function switchTheme() {
 
 
 
-//Reduced motion toogle
+//Reduced motion toggle
 var motionSwitch = document.querySelector('header nav ul li:last-of-type button');
 
 motionSwitch.onclick = motionYesNo
