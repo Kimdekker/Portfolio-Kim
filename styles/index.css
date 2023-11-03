@@ -1,3 +1,7 @@
+canvas{
+    display: block;
+}
+
 section:first-of-type{
     padding: 0% 3em;
 }
@@ -14,31 +18,41 @@ section:first-of-type h1{
 
 
 section:first-of-type h2{
-    font-size: calc(var(--fs-1) * 1.5);
+    font-size: clamp(4rem, 1.4286rem + 11.4286vw, 10rem);    
     margin: 0em 0em 0.2em 0em;
+    width: 80%;
 }
 
 
-section:first-of-type ul{
+section:first-of-type > section{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    align-items: end;
+}
+
+
+section:first-of-type > section ul{
     display: flex;
     flex-direction: column;
     display: inline-block;
 }
 
-section:first-of-type ul li{
+section:first-of-type > section ul li{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-section:first-of-type ul li h3{
+section:first-of-type > section ul li h3{
     font-size: var(--fs-5); 
     margin: 0em;
     font-weight: 300;
 }
 
-section:first-of-type ul li span{
+section:first-of-type > section ul li span{
     font-size: var(--fs-5); 
     font-family: var(--ff-hdr);
     color: var(--primary-clr-tint1);
@@ -49,12 +63,12 @@ section:first-of-type ul li span{
 
 
 
-section:first-of-type ul li:first-of-type h3{
+section:first-of-type > section ul li:first-of-type h3{
     animation: under 10s infinite;
     position: relative;
 }
 
-section:first-of-type ul li:last-of-type h3{
+section:first-of-type > section ul li:last-of-type h3{
     animation: up 10s infinite;
     position: relative;
 }
@@ -71,7 +85,7 @@ section:first-of-type ul li:last-of-type h3{
   }
 
 
-  @keyframes under {
+@keyframes under {
     0% { top: 0%; transform: perspective(500px) translateZ(0px); filter: blur(0rem);}
     40% { top: 0%; transform: perspective(500px) translateZ(0px); filter: blur(0rem);}
     45% { transform: perspective(500px) translateZ(-100px); filter: blur(0.2rem);}
@@ -80,4 +94,62 @@ section:first-of-type ul li:last-of-type h3{
     90% { top: 100%; transform: perspective(500px) translateZ(0px); filter: blur(0rem);}
     95% { transform: perspective(500px) translateZ(-100px); filter: blur(0.2rem);}
     100% { top: 0%; transform: perspective(500px) translateZ(0px); filter: blur(0rem);}
-  }
+}
+
+
+
+section:first-of-type > section section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-right: 5.5%;
+}
+
+section:first-of-type > section section div a{
+    background-color: var(--primary-clr);
+    border-radius: 4em;
+    color: var(--white);
+    padding: 1em 2em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    filter: var(--dropshadow);
+    font-family: var(--ff-hdr);
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+
+.bordera{
+    border: 2px solid var(--primary-clr);
+    margin-bottom: var(--spacer);
+    border-radius: 4em;
+    transition: 0.3s ease-in-out;
+    border-width: 0px 2px 0px 2px;
+}
+
+
+section:first-of-type > section section div.bordera:hover {
+    border: 2px solid var(--primary-clr);
+    border-width: 0px 2px 0px 2px;
+    padding: 8px;
+    margin: 0px -8px 0px -8px;
+}
+
+
+section:first-of-type > section section div a img{
+    width: 1.2em;
+    margin-left: 1em;
+}
+
+
+section:first-of-type > section section > a{
+    font-family: var(--ff);
+    text-transform: lowercase;
+    font-size: 1.2em;
+
+}
+
+section:first-of-type > section section > a:first-of-type{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}

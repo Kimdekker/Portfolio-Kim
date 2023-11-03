@@ -9,42 +9,43 @@ document.body.addEventListener("mousemove", function (e) {
 
 //Loader
 window.addEventListener('load', function() {
-  const loaderWrapper = document.querySelector('.loader-wrapper');
+    const loaderWrapper = document.querySelector('.loader-wrapper');
 
-  // Simulate loading time (in this case, 2.1 seconds)
-  setTimeout(function() {
-      loaderWrapper.classList.add('loaded');
-  }, 2100);
+    // Simulate loading time (in this case, 2.1 seconds)
+    setTimeout(function() {
+        loaderWrapper.classList.add('loaded');
+    }, 2100);
 });
+
+
+
 
 //Dark light mode toggle
 var darkModeSwitch = document.querySelector('header nav ul li:first-of-type button');
 
-darkModeSwitch.onclick = switchTheme
+darkModeSwitch.onclick = switchTheme;
+
+// Check local storage for dark mode preference on page load
+if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('darkmode');
+    document.querySelector('header nav ul li:first-of-type button img').classList.add('upsidedown');
+}
 
 function switchTheme() {
     var bodySwitchColor = document.querySelector('body');
     var iconDarkmode = document.querySelector('header nav ul li:first-of-type button img');
 
-  bodySwitchColor.classList.toggle('darkmode');
-  iconDarkmode.classList.toggle('upsidedown');
+    bodySwitchColor.classList.toggle('darkmode');
+    iconDarkmode.classList.toggle('upsidedown');
+
+    // Update local storage to reflect dark mode preference
+    if (bodySwitchColor.classList.contains('darkmode')) {
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
+    }
 }
 
-
-
-
-//Reduced motion toggle
-var motionSwitch = document.querySelector('header nav ul li:last-of-type button');
-
-motionSwitch.onclick = motionYesNo
-
-function motionYesNo() {
-    var motionInPage = document.querySelector('body');
-    var iconMotion = document.querySelector('header nav ul li:last-of-type button img');
-
-    motionInPage.classList.toggle('reducedmotion');
-    iconMotion.classList.toggle('upsidedown');
-}
 
 
 //Menu openen
@@ -65,6 +66,31 @@ function foldMenu() {
 }
 
 
+
+
+// the brain
+document.addEventListener('DOMContentLoaded', function() {
+  var canvas = document.getElementById('theBrain');
+  var renderer = new THREE.WebGLRenderer({ canvas: canvas });
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000);
+
+  var loader = new THREE.GLTFLoader();
+
+  loader.load('thebrain.glb', function(gltf) {
+      scene.add(gltf.scene);
+  });
+
+  camera.position.z = 5;
+
+  function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+  }
+
+  animate();
+});
 
 
 

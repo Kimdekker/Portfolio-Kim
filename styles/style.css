@@ -87,6 +87,8 @@
 
     --raster-clr: #00000007;
 
+    --white: #FFFBF4;
+
 	/* Spacers for margins, gaps or paddings */
 	--spacer: 1em;
 	--spacer-md: calc(var(--spacer) * 2);
@@ -99,6 +101,9 @@
 
     --border-sm-grey: 1px solid var(--raster-clr);
 	--border-grey: calc(var(--border-sm-grey) * 2) solid var(--raster-clr);
+
+
+    --dropshadow: 10px 10px 40px 40px rgba(162,130,98,0.18);
 }
 
 
@@ -190,10 +195,7 @@ ul{
 /* REDUCED MOTION */
 /*****************/
 
-.reducedmotion {
-    transition: 0s;
-    animation: none;
-}
+
 
 /*****************/
 /* BODY STYLING */
