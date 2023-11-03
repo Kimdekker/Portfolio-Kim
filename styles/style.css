@@ -335,7 +335,7 @@ header{
     align-items: center;
     justify-content: center;
     margin: var(--spacer) 3em 0em 3em;
-    z-index: 999;
+    z-index: 100;
 }
 
 /* Accesability buttons */
@@ -456,7 +456,7 @@ header nav:nth-of-type(2) button {
 	justify-content: space-between;
 	transform: scaleX(-1);
 	margin: var(--spacer);
-
+    z-index: 999;
 }
 
 header nav:nth-of-type(2) button span{
