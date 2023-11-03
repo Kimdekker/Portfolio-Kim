@@ -1,73 +1,36 @@
-//The brain
+import * as THREE from 'three';
+import GLTFLoader from 'three-gltf-loader';
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Get the canvas element
-  var canvas = document.getElementById('theBrain');
+    var canvas = document.getElementById('theBrain');
+    var renderer = new THREE.WebGLRenderer({ canvas: canvas });
 
-  // Initialize WebGL context
-  var gl = canvas.getContext('webgl');
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000);
 
-  if (!gl) {
-      console.error('Unable to initialize WebGL. Your browser may not support it.');
-      return;
-  }
+    camera.position.z = 5;
 
-  // Define the vertices of your 3D object
-  var vertices = [
-    // Vertex coordinates of your 3D object
-    -1.0, -1.0, -1.0,
-     1.0, -1.0, -1.0,
-     1.0,  1.0, -1.0,
-    -1.0,  1.0, -1.0,
-    -1.0, -1.0,  1.0,
-     1.0, -1.0,  1.0,
-     1.0,  1.0,  1.0,
-    -1.0,  1.0,  1.0
-];
+    const loader = new GLTFLoader();
+    loader.load(
+        'thebrain.gltf',
+        (gltf) => {
+            // called when the resource is loaded
+            scene.add(gltf.scene);
+        },
+        (xhr) => {
+            // called while loading is progressing
+            console.log(`${(xhr.loaded / xhr.total * 100)}% loaded`);
+        },
+        (error) => {
+            // called when loading has errors
+            console.error('An error happened', error);
+        }
+    );
 
-  // Create a buffer for the vertices
-  var vertexBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+    function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+    }
 
-  // Define and compile a vertex shader
-  var vertexShaderSource = `
-  attribute vec4 position;
-  void main() {
-      gl_Position = position;
-  }
-`;
-  var vertexShader = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vertexShader, vertexShaderSource);
-  gl.compileShader(vertexShader);
-
-  // Define and compile a fragment shader
-  var fragmentShaderSource = `
-  precision mediump float;
-  void main() {
-      gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0); // Red color
-  }
-`;
-  var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fragmentShader, fragmentShaderSource);
-  gl.compileShader(fragmentShader);
-
-  // Create a shader program
-  var shaderProgram = gl.createProgram();
-  gl.attachShader(shaderProgram, vertexShader);
-  gl.attachShader(shaderProgram, fragmentShader);
-  gl.linkProgram(shaderProgram);
-  gl.useProgram(shaderProgram);
-
-  // Bind the vertex buffer to the shader program
-  var positionAttribLocation = gl.getAttribLocation(shaderProgram, 'position');
-  gl.vertexAttribPointer(positionAttribLocation, 3, gl.FLOAT, false, 0, 0);
-  gl.enableVertexAttribArray(positionAttribLocation);
-
-  // Set the clear color and clear the canvas
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-
-  // Draw the object
-  gl.drawArrays(gl.TRIANGLES, 0, vertices.length / 3);
+    animate();
 });

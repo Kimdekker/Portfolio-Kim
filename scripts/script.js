@@ -68,29 +68,7 @@ function foldMenu() {
 
 
 
-// the brain
-document.addEventListener('DOMContentLoaded', function() {
-  var canvas = document.getElementById('theBrain');
-  var renderer = new THREE.WebGLRenderer({ canvas: canvas });
 
-  var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000);
-
-  var loader = new THREE.GLTFLoader();
-
-  loader.load('thebrain.glb', function(gltf) {
-      scene.add(gltf.scene);
-  });
-
-  camera.position.z = 5;
-
-  function animate() {
-      requestAnimationFrame(animate);
-      renderer.render(scene, camera);
-  }
-
-  animate();
-});
 
 
 

@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "three": "^0.158.0"
+    "three": "^0.158.0",
+    "three-gltf-loader": "^1.111.0"
+  },
+  "devDependencies": {
+    "vite": "^4.5.0"
   }
 }
