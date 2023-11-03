@@ -151,5 +151,81 @@ section:first-of-type > section section > a{
 
 section:first-of-type > section section > a:first-of-type{
     margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
 }
+
+
+
+/**************************/
+/* PORTFOLIO WORK PIECES */
+/************************/
+
+section:nth-of-type(2){
+    margin-top: var(--spacer-xl);
+}
+
+/* Containing all the pieces of 1 project */
+
+section:nth-of-type(2) section{
+    overflow: hidden;
+    position: relative;
+    width: max-content;
+	animation: float 3s ease-in-out infinite;
+}
+
+
+/* container for the image */
+section:nth-of-type(2) section div:first-of-type{
+    position: relative;
+}
+
+section:nth-of-type(2) section div:first-of-type img{
+    border-radius: 2em;
+}
+
+/* container for the intel inside */
+section:nth-of-type(2) section div:last-of-type{
+    position: absolute;
+    bottom: 0;
+    padding: var(--spacer);
+    clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    transition: 0.6s ease-in-out;
+}
+
+/* Inside the container with all the intel */
+section:nth-of-type(2) section div:last-of-type h2{
+    font-size: var(--fs-3);
+    margin: 0em;
+    padding: 0em;
+}
+
+
+/* hover over section */
+
+section:nth-of-type(2) section:hover div:last-of-type{
+    clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* @keyframes float {
+	0% {transform: translatey(0px);}
+	50% {transform: translatey(-20px);}
+	100% {transform: translatey(0px);
+	}
+} */
+
+/* Intersection observer */
+
+
+.hidden {
+    opacity: 0;
+    transform: translateX(20em) scale(0);
+    transition: opacity 1s ease-in-out, transform 1.5s ease-in-out, filter 1.5s ease-in-out;
+    filter: blur(5em);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+}
+

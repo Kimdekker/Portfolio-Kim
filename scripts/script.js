@@ -72,17 +72,17 @@ function foldMenu() {
 
 
 
-// //Intersection observer code
-// const flyInUnder = document.querySelector('main section:nth-of-type(4)');
-// const observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('visible');
-//       observer.unobserve(entry.target);
-//     }
-//   });
-// }, {
-//   threshold: 0.2
-// });
+//Intersection observer code
+const flyInUnder = document.querySelector('.leftProject');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.2
+});
 
-// observer.observe(flyInUnder);
+observer.observe(flyInUnder);

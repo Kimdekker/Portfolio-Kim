@@ -93,7 +93,7 @@
 	--spacer: 1em;
 	--spacer-md: calc(var(--spacer) * 2);
 	--spacer-lg: calc(var(--spacer) * 3);
-    --spacer-xl: calc(var(--spacer) * 5);
+    --spacer-xl: calc(var(--spacer) * 10);
 
 	/* Borders */
 	--border-sm: 1px solid var(--primary-clr);
@@ -335,6 +335,7 @@ header{
     align-items: center;
     justify-content: center;
     margin: var(--spacer) 3em 0em 3em;
+    z-index: 999;
 }
 
 /* Accesability buttons */
@@ -455,6 +456,7 @@ header nav:nth-of-type(2) button {
 	justify-content: space-between;
 	transform: scaleX(-1);
 	margin: var(--spacer);
+
 }
 
 header nav:nth-of-type(2) button span{
@@ -553,6 +555,7 @@ header nav:last-of-type {
 	translate: 100% 0%;
     transition: 1s ease-in-out;
     box-shadow: -16px 0px 26px 0px rgba(0,0,0,0.25);
+    z-index: 998;
 }
 
 
