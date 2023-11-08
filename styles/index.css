@@ -1,3 +1,23 @@
+/* The brain */
+
+main > img{
+    position: fixed;
+    z-index: -100;
+    height: 90vh;
+    top: 50%;
+    left: 60%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: 0.6s ease-in-out;
+}
+
+.scrollbrain{
+    left: 50%;
+    height: 85vh;
+    top: 60%;
+}
+
+
 canvas{
     display: block;
 }
@@ -228,4 +248,6 @@ section:nth-of-type(2) section:hover div:last-of-type{
     transform: translateX(0) scale(1);
     filter: blur(0);
 }
+
+
 

@@ -67,11 +67,6 @@ function foldMenu() {
 
 
 
-
-
-
-
-
 //Intersection observer code
 const flyInUnder = document.querySelector('.leftProject');
 const observer = new IntersectionObserver(entries => {
@@ -86,3 +81,36 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(flyInUnder);
+
+
+
+const brain = document.querySelector('.brain');
+let addedClass = false;
+
+const scrollbrain = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && window.scrollY > window.innerHeight * 0.5) {
+      entry.target.classList.add('scrollbrain');
+      addedClass = true;
+    }
+  });
+}, {
+  threshold: [0]
+});
+
+scrollbrain.observe(brain);
+
+window.addEventListener('scroll', () => {
+  if (!addedClass && window.scrollY > window.innerHeight * 0.5) {
+    brain.classList.add('scrollbrain');
+    addedClass = true;
+  } else if (addedClass && window.scrollY <= window.innerHeight * 0.5) {
+    brain.classList.remove('scrollbrain');
+    addedClass = false;
+  }
+});
+
+
+
+
+
