@@ -67,7 +67,7 @@ function foldMenu() {
 
 
 
-//Intersection observer code
+//Observer for left projects
 const flyInUnder = document.querySelector('.leftProject');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -83,6 +83,8 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(flyInUnder);
 
 
+
+//Observer for the brain
 
 const brain = document.querySelector('.brain');
 let addedClass = false;
@@ -111,6 +113,93 @@ window.addEventListener('scroll', () => {
 });
 
 
+//Observer for H2 of homepage intro
+const left = document.querySelector('.left');
+let addLeftSwing = false;
 
+const swingLeft = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && window.scrollY > window.innerHeight * 0.4) {
+      entry.target.classList.add('swingleft');
+      addLeftSwing = true;
+    }
+  });
+}, {
+  threshold: [0]
+});
+
+swingLeft.observe(left);
+
+window.addEventListener('scroll', () => {
+  if (!addLeftSwing && window.scrollY > window.innerHeight * 0.4) {
+    left.classList.add('swingleft');
+    addLeftSwing = true;
+  } else if (addLeftSwing && window.scrollY <= window.innerHeight * 0.4) {
+    left.classList.remove('swingleft');
+    addLeftSwing = false;
+  }
+});
+
+
+
+
+//Observer for skills part of homepage intro
+const left2 = document.querySelector('.left2');
+let addLeftSwing2 = false;
+
+const swingLeft2 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && window.scrollY > window.innerHeight * 0.4) {
+      entry.target.classList.add('swingleft');
+      addLeftSwing2 = true;
+    }
+  });
+}, {
+  threshold: [0]
+});
+
+swingLeft2.observe(left2);
+
+window.addEventListener('scroll', () => {
+  if (!addLeftSwing2 && window.scrollY > window.innerHeight * 0.4) {
+    left2.classList.add('swingleft');
+    addLeftSwing2 = true;
+  } else if (addLeftSwing2 && window.scrollY <= window.innerHeight * 0.4) {
+    left2.classList.remove('swingleft');
+    addLeftSwing2 = false;
+  }
+});
+
+
+
+
+
+
+//Observer for right part of homepage intro
+const right = document.querySelector('.right');
+let addrightSwing = false;
+
+const swingRight = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && window.scrollY > window.innerHeight * 0.4) {
+      entry.target.classList.add('swingright');
+      addrightSwing = true;
+    }
+  });
+}, {
+  threshold: [0]
+});
+
+swingRight.observe(right);
+
+window.addEventListener('scroll', () => {
+  if (!addrightSwing && window.scrollY > window.innerHeight * 0.4) {
+    right.classList.add('swingright');
+    addrightSwing = true;
+  } else if (addrightSwing && window.scrollY <= window.innerHeight * 0.4) {
+    right.classList.remove('swingright');
+    addrightSwing = false;
+  }
+});
 
 
