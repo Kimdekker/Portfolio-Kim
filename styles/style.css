@@ -336,6 +336,8 @@ header{
     justify-content: center;
     margin: var(--spacer) 3em 0em 3em;
     z-index: 100;
+    position: sticky;
+    top: 1em;
 }
 
 /* Accesability buttons */

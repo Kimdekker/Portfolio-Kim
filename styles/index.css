@@ -181,6 +181,13 @@ section:first-of-type > section section div.bordera:hover {
     margin: 0px -8px 0px -8px;
 }
 
+section:first-of-type > section section div.bordera:hover {
+    border: 2px solid var(--primary-clr);
+    border-width: 0px 2px 0px 2px;
+    padding: 8px;
+    margin: 0px -8px 0px -8px;
+}
+
 
 section:first-of-type > section section div a img{
     width: 1.2em;
@@ -198,6 +205,19 @@ section:first-of-type > section section > a{
 section:first-of-type > section section > a:first-of-type{
     margin-top: 0.5em;
     margin-bottom: 0.3em;
+}
+
+section:first-of-type > section section > p{
+    margin: 0em;
+}
+
+section:first-of-type > section section > p > span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 1em;
+    background-color: rgb(0, 232, 23);
+    margin-right: .5em;
 }
 
 
@@ -227,60 +247,123 @@ section:first-of-type > section section > a:first-of-type{
 /************************/
 
 section:nth-of-type(2){
-    margin-top: var(--spacer-xl);
+    margin: var(--spacer-xl) 3em;
+}
+
+/* Hide title*/
+section:nth-of-type(2) > h2{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 /* Containing all the pieces of 1 project */
 
-section:nth-of-type(2) section{
+section:nth-of-type(2) section a{
     overflow: hidden;
     position: relative;
     width: max-content;
+    display: inline-block;
 	animation: float 3s ease-in-out infinite;
 }
 
 
 /* container for the image */
-section:nth-of-type(2) section div:first-of-type{
+section:nth-of-type(2) section a div:first-of-type{
     position: relative;
+    background-color: #171614;
+    border-radius: 2em;
+    width: 35em;
+    height: 35em;
 }
 
-section:nth-of-type(2) section div:first-of-type img{
+section:nth-of-type(2) section a div:first-of-type img{
     border-radius: 2em;
+    transition: 0.6s ease-in-out;
+    width: 35em;
+    height: auto;
 }
 
 /* container for the intel inside */
-section:nth-of-type(2) section div:last-of-type{
+section:nth-of-type(2) section a div:last-of-type{
     position: absolute;
     bottom: 0;
     padding: var(--spacer);
     clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    display: inline-block;
     transition: 0.6s ease-in-out;
 }
 
 /* Inside the container with all the intel */
-section:nth-of-type(2) section div:last-of-type h2{
-    font-size: var(--fs-3);
+section:nth-of-type(2) section a div:last-of-type h3{
+    margin: 0em;
+    padding: 0em;
+    color: #FFFBF4; 
+}
+
+section:nth-of-type(2) section a div:last-of-type h4{
+    color: #FFFBF4;
     margin: 0em;
     padding: 0em;
 }
 
 
+section:nth-of-type(2) section a div:last-of-type label{
+    color: #FFFBF4;
+    background-color: var(--primary-clr);
+    padding: .3em 1em;
+    border-radius: 1em;
+    margin-top: 1em;
+    display: inline-block;
+}
+
+
 /* hover over section */
 
-section:nth-of-type(2) section:hover div:last-of-type{
+section:nth-of-type(2) section a:hover div:last-of-type{
     clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-/* @keyframes float {
-	0% {transform: translatey(0px);}
-	50% {transform: translatey(-20px);}
-	100% {transform: translatey(0px);
-	}
-} */
+section:nth-of-type(2) section a:hover div:first-of-type img{
+    opacity: .2;
+}
+
+
+section:nth-of-type(2) section a:focus div:last-of-type{
+    clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+section:nth-of-type(2) section a:focus div:first-of-type img{
+    opacity: .2;
+}
+
+
+
+
+/* Right projects */
+
+section:nth-of-type(2) .rightProject{
+    width: calc(100vw - 6em);
+    display: flex;
+    justify-content: end;
+    margin: 0em;
+}
+
+section:nth-of-type(2) .rightProject a, section:nth-of-type(2) .rightProject img{
+    width: max-content;
+}
+
+section:nth-of-type(2) .rightProject a{
+    width: max-content;
+}
+
+
 
 /* Intersection observer */
-
 
 .hidden {
     opacity: 0;
@@ -293,6 +376,20 @@ section:nth-of-type(2) section:hover div:last-of-type{
     opacity: 1;
     transform: translateX(0) scale(1);
     filter: blur(0);
+}
+
+
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
 
 
