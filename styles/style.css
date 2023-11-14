@@ -353,7 +353,7 @@ header nav:first-of-type ul{
 }
 header nav:first-of-type ul li button{
     cursor: pointer;
-    padding: 0.8em 0.9em;
+    padding: 0.8em 0.8em 0.7em 0.8em;
     background-color: var(--grey-tint2);
     border: none;
     border-radius: 50em;

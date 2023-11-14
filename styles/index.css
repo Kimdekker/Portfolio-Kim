@@ -98,11 +98,11 @@ section:first-of-type > section h3{
 }
 
 section:first-of-type > section h3 span:nth-of-type(2n){
-    color: var(--primary-clr-tint1);
     display: flex;
     align-items: end;
-    margin-left: var(--spacer);
+    margin-left: 0.5em;
 }
+
 
 section:first-of-type > section h3 span:nth-of-type(1), section:first-of-type > section h3 span:nth-of-type(3){
     text-align: right;
@@ -269,6 +269,7 @@ section:nth-of-type(2) section a{
     width: max-content;
     display: inline-block;
 	animation: float 3s ease-in-out infinite;
+    margin-top: -10em;
 }
 
 
@@ -277,22 +278,23 @@ section:nth-of-type(2) section a div:first-of-type{
     position: relative;
     background-color: #171614;
     border-radius: 2em;
-    width: 35em;
-    height: 35em;
+    width: 45vw;
+    height: 80vh;
 }
 
 section:nth-of-type(2) section a div:first-of-type img{
     border-radius: 2em;
     transition: 0.6s ease-in-out;
-    width: 35em;
-    height: auto;
+    width: 45vw;
+    height: 80vh;
+    object-fit: cover;
 }
 
 /* container for the intel inside */
 section:nth-of-type(2) section a div:last-of-type{
     position: absolute;
     bottom: 0;
-    padding: var(--spacer);
+    padding: var(--spacer-md);
     clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
     display: inline-block;
     transition: 0.6s ease-in-out;
