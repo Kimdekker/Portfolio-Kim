@@ -26,11 +26,6 @@ main > img{
 
 
 
-
-canvas{
-    display: block;
-}
-
 main > section:first-of-type{
     padding: 0% 3em;
     height: 100vh;
@@ -151,47 +146,11 @@ section:first-of-type > section section{
     transition: 0.6s ease-in-out;
 }
 
-section:first-of-type > section section div a{
-    background-color: var(--primary-clr);
-    border-radius: 4em;
-    color: var(--white);
-    padding: 1em 2em;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    filter: var(--dropshadow);
-    font-family: var(--ff-hdr);
-    text-transform: uppercase;
-    transition: 0.3s ease-in-out;
-}
 
-.bordera{
-    border: 2px solid var(--primary-clr);
-    margin-bottom: var(--spacer);
-    border-radius: 4em;
-    transition: 0.3s ease-in-out;
-    border-width: 0px 2px 0px 2px;
-}
-
-
-section:first-of-type > section section div.bordera:hover {
-    border: 2px solid var(--primary-clr);
-    border-width: 0px 2px 0px 2px;
-    padding: 8px;
-    margin: 0px -8px 0px -8px;
-}
-
-section:first-of-type > section section div.bordera:hover {
-    border: 2px solid var(--primary-clr);
-    border-width: 0px 2px 0px 2px;
-    padding: 8px;
-    margin: 0px -8px 0px -8px;
-}
-
-
-section:first-of-type > section section div a img{
-    width: 1.2em;
-    margin-left: 1em;
+section:first-of-type > section section > a:not(:first-child){
+    padding: 0em;
+    background-color: transparent;
+    color: var(--txt-clr);
 }
 
 
@@ -228,6 +187,7 @@ section:first-of-type > section section > p > span{
 .right{
     position: fixed;
     right: 3%;
+    width: max-content;
 }
 
 .swingleft{
@@ -248,6 +208,7 @@ section:first-of-type > section section > p > span{
 
 section:nth-of-type(2){
     margin: var(--spacer-xl) 3em;
+    position: relative;
 }
 
 /* Hide title*/
@@ -269,6 +230,11 @@ section:nth-of-type(2) section a{
     width: max-content;
     display: inline-block;
 	animation: float 3s ease-in-out infinite;
+    margin-top: -15em;
+    border-radius: 2em;
+}
+
+section:nth-of-type(2) section:first-of-type a{
     margin-top: -10em;
 }
 
@@ -365,18 +331,48 @@ section:nth-of-type(2) .rightProject a{
 
 
 
+/* Button to all projects */
+section:nth-of-type(2) div{
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacer-md);
+}
+
+section:nth-of-type(2) div .bordera{
+    width: max-content;
+    border-color: var(--txt-clr);
+}
+
+section:nth-of-type(2) div .bordera:hover{
+    border-color: var(--txt-clr);
+    margin-bottom: 2em;
+}
+
+section:nth-of-type(2) div .bordera a{
+    background-color: var(--txt-clr);
+    color: var(--bg-color);
+}
+
+
+
+section:nth-of-type(2) div .bordera a img{
+    width: 12%;
+    mix-blend-mode: difference;
+}
+
+
 /* Intersection observer */
 
 .hidden {
     opacity: 0;
-    transform: translateX(20em) scale(0);
-    transition: opacity 1s ease-in-out, transform 1.5s ease-in-out, filter 1.5s ease-in-out;
+    transform: translateX(0em) scale(0);
+    transition: opacity .5s ease-in-out, transform 1s ease-in-out, filter 1s ease-in-out;
     filter: blur(5em);
 }
 
 .visible {
     opacity: 1;
-    transform: translateX(0) scale(1);
+    transform: translateX(0em) scale(1);
     filter: blur(0);
 }
 
@@ -393,6 +389,288 @@ section:nth-of-type(2) .rightProject a{
 		transform: translatey(0px);
 	}
 }
+
+
+
+/* IF THERE IS NO CURSOR */
+
+@media (hover: none) {
+    section:nth-of-type(2) section a div:last-of-type{
+        position: absolute;
+        bottom: 0;
+        padding: var(--spacer-md);
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        display: inline-block;
+        transition: 0.6s ease-in-out;
+        background: linear-gradient(0deg, #171614 0%, rgba(0,0,0,0) 100%); 
+    }
+    
+}
+
+
+/**************************/
+/* ABOUT ME INSIDE INDEX */
+/************************/
+
+
+main > section:nth-of-type(3){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60vw;
+    background-color: var(--txt-clr);
+    padding: var(--spacer-lg);
+    border-radius: 2em;
+}
+
+main > section:nth-of-type(3) h2{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+main > section:nth-of-type(3) img{
+    width: 10em;
+    margin-right: var(--spacer-md);
+    border-radius: 100%;
+}
+
+
+main > section:nth-of-type(3) div h3{
+    font-size: var(--fs-5);
+    margin: 0em;
+    color: var(--bg-color);
+}
+
+main > section:nth-of-type(3) div p{
+    color: var(--bg-color);
+}
+
+main > section:nth-of-type(3) div .bordera{
+    width: max-content;
+    border-color: var(--bg-color);
+}
+
+main > section:nth-of-type(3) div .bordera a{
+    background-color: var(--bg-color);
+    color: var(--txt-clr);
+}
+
+main > section:nth-of-type(3) div .bordera a img{
+    width: 1.7em;
+    margin-right: -0.1em;
+    mix-blend-mode: difference;
+    transition: 0.3s ease-in-out;
+}
+
+main > section:nth-of-type(3) div .bordera a:hover img{
+    transform: rotate(20deg);
+}
+
+
+
+/*******************/
+/* MEDIA QUERIES */
+/*****************/
+
+/* MIN WIDTH: 1600PX */
+
+@media only screen and (min-width: 1600px) {
+    section:first-of-type h2{
+        font-size: clamp(4rem, 1.4286rem + 11.4286vw, 10rem);    
+        margin: 0em 0em 0.2em 0em;
+        width: 20%;
+    }
+}
+
+
+
+/* MIN WIDTH: 1100PX */
+
+
+@media only screen and (max-width: 1100px) {
+    section:first-of-type > section h3{
+        margin-bottom: 7em;
+    }
+
+    section:nth-of-type(2) section a div:first-of-type {
+        width: 43vw;
+        height: 80vh;
+      }
+
+    section:nth-of-type(2) section a div:first-of-type img {
+        width: 43vw;
+        height: 80vh;
+      }
+
+
+      section:nth-of-type(2) section a div:last-of-type h3{
+        font-size: var(--fs-4);
+    }
+    
+    section:nth-of-type(2) section a div:last-of-type h4{
+        font-size: var(--fs-5);
+
+    }
+    
+    
+    section:nth-of-type(2) section a div:last-of-type label{
+        font-size: 1em;
+    }
+}
+
+
+/* MAX WIDTH: 900PX */
+
+@media only screen and (max-width: 900px) {
+    section:nth-of-type(2){
+        margin: var(--spacer-xl) 1em;
+    }
+
+    .bottom{
+        left: 1em;
+        right: 1em;
+    }
+
+    main > img{
+        height: 70vh;
+        top: 40%;
+    }
+
+    .scrollbrain{
+        height: 70vh;
+        top: 60%;
+        left: 55%;
+    }
+
+    section:nth-of-type(2) .rightProject {
+        width: calc(100vw - 3em);
+      }
+
+    section:nth-of-type(2) section a div:first-of-type {
+        width: 45vw;
+        height: 80vh;
+      }
+
+    section:nth-of-type(2) section a div:first-of-type img {
+        width: 45vw;
+        height: 80vh;
+      }
+
+}
+
+
+/* MAX WIDTH: 750PX */
+
+
+@media only screen and (max-width: 750px) {
+    section:first-of-type > section ul li h3{
+        font-size: var(--fs-6); 
+    }
+    
+    section:first-of-type > section h3{
+        font-size: var(--fs-6); 
+    }
+
+    section:first-of-type > section h3{
+        margin-bottom: 10em;
+    }
+
+    main > img{
+        height: 60vh;
+        top: 35%;
+    }
+
+    .scrollbrain{
+        height: 60vh;
+        top: 60%;
+        left: 55%;
+
+    }
+
+    main > section:first-of-type {
+        height: 100vh;
+    }
+
+    .right {
+        left: 0em;
+        position: absolute;
+      }
+      
+
+      section:first-of-type > section h3 span:nth-of-type(1), section:first-of-type > section h3 span:nth-of-type(3) {
+        text-align: left;
+      }
+
+
+    section:nth-of-type(2) section a div:first-of-type {
+        width: 92vw;
+        height: 50vh;
+      }
+
+    section:nth-of-type(2) section a div:first-of-type img {
+        width: 92vw;
+        height: 50vh;
+      }
+
+     section:nth-of-type(2) section a{
+        margin-top: var(--spacer);
+    }
+
+    section:nth-of-type(2) .rightProject {
+        width: calc(100vw - 1.9em);
+      }
+
+
+    section:nth-of-type(2) section a div:last-of-type label{
+        display: none;
+    }
+
+}
+
+
+/* MAX WIDTH: 600PX */
+
+@media only screen and (max-width: 600px) {
+    main > img{
+        height: 45vh;
+        top: 30%;
+    }
+
+    .scrollbrain{
+        height: 45vh;
+        top: 60%;
+    }
+
+    section:first-of-type > section h3{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* MAX WIDTH: 450PX */
+
+@media only screen and (max-width: 450px) {
+    main > img{
+        height: 37vh;
+        top: 19%;
+        left: 43%;
+    }
+
+    .scrollbrain{
+        height: 37vh;
+        top: 55%;
+        left: 28%;
+    }
+}
+
+
+
 
 
 
