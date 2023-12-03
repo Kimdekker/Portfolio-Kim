@@ -361,6 +361,10 @@ section:nth-of-type(2) div .bordera a img{
 }
 
 
+
+
+
+
 /* Intersection observer */
 
 .hidden {
@@ -392,7 +396,95 @@ section:nth-of-type(2) div .bordera a img{
 
 
 
-/* IF THERE IS NO CURSOR */
+/**************************/
+/* ABOUT ME INSIDE INDEX */
+/************************/
+
+main > section:nth-of-type(3){
+    display: flex;
+    justify-content: center;
+}
+
+
+main > section:nth-of-type(3) > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60vw;
+    background-color: var(--txt-clr);
+    padding: var(--spacer-lg);
+    border-radius: 2em;
+}
+
+main > section:nth-of-type(3) > div h2{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+main > section:nth-of-type(3) > div img{
+    width: 10em;
+    margin-right: var(--spacer-md);
+    border-radius: 100%;
+}
+
+
+main > section:nth-of-type(3) > div > div h3{
+    font-size: var(--fs-5);
+    margin: 0em;
+    color: var(--bg-color);
+}
+
+main > section:nth-of-type(3) > div > div p{
+    color: var(--bg-color);
+    font-weight: var(--fw-t);
+}
+
+main > section:nth-of-type(3) > div > div .bordera{
+    width: max-content;
+    border-color: var(--bg-color);
+}
+
+main > section:nth-of-type(3) > div > div .bordera a{
+    background-color: var(--bg-color);
+    color: var(--txt-clr);
+}
+
+main > section:nth-of-type(3) > div > div .bordera a img{
+    width: 1.7em;
+    margin-right: -0.1em;
+    mix-blend-mode: difference;
+    transition: 0.3s ease-in-out;
+}
+
+main > section:nth-of-type(3) > div > div .bordera a:hover img{
+    transform: rotate(20deg);
+}
+
+
+
+/***************/
+/* CONTACT ME */
+/*************/
+
+main > section:nth-of-type(4) h2{
+    font-size: var(--fs-p);
+}
+
+
+
+
+
+/*******************/
+/* MEDIA QUERIES */
+/*****************/
+
+
+/* FOR TOUCHSCREEN */
 
 @media (hover: none) {
     section:nth-of-type(2) section a div:last-of-type{
@@ -408,74 +500,6 @@ section:nth-of-type(2) div .bordera a img{
 }
 
 
-/**************************/
-/* ABOUT ME INSIDE INDEX */
-/************************/
-
-
-main > section:nth-of-type(3){
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 60vw;
-    background-color: var(--txt-clr);
-    padding: var(--spacer-lg);
-    border-radius: 2em;
-}
-
-main > section:nth-of-type(3) h2{
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-}
-
-main > section:nth-of-type(3) img{
-    width: 10em;
-    margin-right: var(--spacer-md);
-    border-radius: 100%;
-}
-
-
-main > section:nth-of-type(3) div h3{
-    font-size: var(--fs-5);
-    margin: 0em;
-    color: var(--bg-color);
-}
-
-main > section:nth-of-type(3) div p{
-    color: var(--bg-color);
-}
-
-main > section:nth-of-type(3) div .bordera{
-    width: max-content;
-    border-color: var(--bg-color);
-}
-
-main > section:nth-of-type(3) div .bordera a{
-    background-color: var(--bg-color);
-    color: var(--txt-clr);
-}
-
-main > section:nth-of-type(3) div .bordera a img{
-    width: 1.7em;
-    margin-right: -0.1em;
-    mix-blend-mode: difference;
-    transition: 0.3s ease-in-out;
-}
-
-main > section:nth-of-type(3) div .bordera a:hover img{
-    transform: rotate(20deg);
-}
-
-
-
-/*******************/
-/* MEDIA QUERIES */
-/*****************/
 
 /* MIN WIDTH: 1600PX */
 
@@ -521,6 +545,10 @@ main > section:nth-of-type(3) div .bordera a:hover img{
     section:nth-of-type(2) section a div:last-of-type label{
         font-size: 1em;
     }
+
+    main > section:nth-of-type(3) > div{
+        width: 90.5vw;
+    }
 }
 
 
@@ -560,6 +588,10 @@ main > section:nth-of-type(3) div .bordera a:hover img{
         width: 45vw;
         height: 80vh;
       }
+
+    main > section:nth-of-type(3) > div{
+        width: 96vw;
+    }
 
 }
 
@@ -633,6 +665,22 @@ main > section:nth-of-type(3) div .bordera a:hover img{
 }
 
 
+/* MAX WIDTH: 650PX */
+
+@media only screen and (max-width: 650px) {
+    main > section:nth-of-type(3) > div{
+        width: 95vw;
+        flex-direction: column;
+    }
+
+    main > section:nth-of-type(3) > div > img{
+        margin-bottom: var(--spacer-md);
+    }
+
+}
+
+
+
 /* MAX WIDTH: 600PX */
 
 @media only screen and (max-width: 600px) {
@@ -666,6 +714,10 @@ main > section:nth-of-type(3) div .bordera a:hover img{
         height: 37vh;
         top: 55%;
         left: 28%;
+    }
+
+    main > section:nth-of-type(3) > div{
+        width: 93vw;
     }
 }
 
