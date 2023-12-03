@@ -467,15 +467,6 @@ main > section:nth-of-type(3) > div > div .bordera a:hover img{
 
 
 
-/***************/
-/* CONTACT ME */
-/*************/
-
-main > section:nth-of-type(4) h2{
-    font-size: var(--fs-p);
-}
-
-
 
 
 
