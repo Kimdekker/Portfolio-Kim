@@ -672,10 +672,22 @@ header nav:last-of-type > ul li a::before{
 /***********/
 /* FOOTER */
 /*********/
+
+
 footer{
+    --lines: calc(8.3333333333% - 1px);
     margin-top: 20em;
     background-color: var(--bg-color);
+    background: repeating-linear-gradient(to left, var(--bg-color) 0 var(--lines), rgb(236, 232, 225) var(--lines) calc(var(--lines) + 1px));
 }
+
+
+.darkmode footer{
+    --lines: calc(8.3333333333% - 1px);
+    background: repeating-linear-gradient(to left, var(--bg-color) 0 var(--lines), rgb(38, 37, 34) var(--lines) calc(var(--lines) + 1px));
+}
+
+
 
 
 /* MARQUEE IN FOOTER */
