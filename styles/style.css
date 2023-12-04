@@ -21,7 +21,7 @@
 @font-face {
 	/* For the headers and buttons*/
 	font-family: "KDHeaders";
-	src: url('../fonts/KD_hds-VariableFont_wght.ttf') format('truetype'), ;
+	src: url('../assets/fonts/KD_hds-VariableFont_wght.ttf') format('truetype'), ;
 	font-weight: 400;
 	font-style: normal;
 }
@@ -29,7 +29,7 @@
 @font-face {
 	/* For the body text */
 	font-family: "KDText";
-	src: url('../fonts/KD_txt-VariableFont_opsz\,wght.ttf') format('truetype');
+	src: url('../assets/fonts/KD_txt-VariableFont_opsz\,wght.ttf') format('truetype');
     font-style: normal; 
 }
 
@@ -37,7 +37,7 @@
 @font-face {
 	/* For handwrite style text */
 	font-family: "KDHandwritten";
-	src: url('../fonts/KDhandwritten.ttf') format('truetype');
+	src: url('../assets/fonts/KDhandwritten.ttf') format('truetype');
     text-transform: uppercase;
     letter-spacing: -50;
 }
