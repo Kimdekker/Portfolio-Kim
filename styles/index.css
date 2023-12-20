@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 main > h1{
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -699,18 +703,22 @@ main > section:nth-of-type(3) > div > div .bordera a:hover img{
 @media only screen and (max-width: 450px) {
     main > img{
         height: 37vh;
-        top: 19%;
-        left: 43%;
+        top: 30%;
+        left: 63%;
     }
 
     .scrollbrain{
         height: 37vh;
         top: 55%;
-        left: 28%;
+        left: 52%;
     }
 
     main > section:nth-of-type(3) > div{
         width: 93vw;
+    }
+
+    .bottom{
+        bottom: 0em;
     }
 }
 
