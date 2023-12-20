@@ -462,7 +462,8 @@ header a{
 
 
 header a:hover,
-header a:focus {
+header a:focus,
+header a.focused {
     background-position:left bottom;
 }
 
@@ -481,7 +482,8 @@ header a::before {
   }
 
 header a:hover::before,
-header a:focus::before {
+header a:focus::before,
+header a.focused::before {
     transform-origin: left;
     transform: scaleX(1) rotate(-2deg);
   }
