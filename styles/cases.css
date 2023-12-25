@@ -1,4 +1,4 @@
-main > h1{
+main>h1 {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -10,7 +10,7 @@ main > h1{
 
 /* The brain */
 
-main > img{
+main>img {
     position: fixed;
     z-index: -100;
     height: 80vh;
@@ -31,13 +31,13 @@ main > img{
 /************************/
 
 
-main > section:nth-of-type(1){
+main>section:nth-of-type(1) {
     margin: var(--spacer-xl) 3em;
     position: relative;
 }
 
 /* Hide title*/
-main > section:nth-of-type(1) > h2{
+main>section:nth-of-type(1)>h2 {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -49,23 +49,23 @@ main > section:nth-of-type(1) > h2{
 
 /* Containing all the pieces of 1 project */
 
-main > section:nth-of-type(1) section a{
+main>section:nth-of-type(1) section a {
     overflow: hidden;
     position: relative;
     width: max-content;
     display: inline-block;
-	animation: float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
     margin-top: -22em;
     border-radius: 2em;
 }
 
-main > section:nth-of-type(1) section:first-of-type a{
+main>section:nth-of-type(1) section:first-of-type a {
     margin-top: -10em;
 }
 
 
 /* container for the image */
-main > section:nth-of-type(1) section a div:first-of-type{
+main>section:nth-of-type(1) section a div:first-of-type {
     position: relative;
     background-color: #171614;
     border-radius: 2em;
@@ -73,7 +73,7 @@ main > section:nth-of-type(1) section a div:first-of-type{
     height: 80vh;
 }
 
-main > section:nth-of-type(1) section a div:first-of-type img{
+main>section:nth-of-type(1) section a div:first-of-type img {
     border-radius: 2em;
     transition: 0.6s ease-in-out;
     width: 45vw;
@@ -82,30 +82,30 @@ main > section:nth-of-type(1) section a div:first-of-type img{
 }
 
 /* container for the intel inside */
-main > section:nth-of-type(1) section a div:last-of-type{
+main>section:nth-of-type(1) section a div:last-of-type {
     position: absolute;
     bottom: 0;
     padding: var(--spacer-md);
-    clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
     display: inline-block;
     transition: 0.6s ease-in-out;
 }
 
 /* Inside the container with all the intel */
-main > section:nth-of-type(1) section a div:last-of-type h3{
+main>section:nth-of-type(1) section a div:last-of-type h3 {
     margin: 0em;
     padding: 0em;
-    color: #FFFBF4; 
+    color: #FFFBF4;
 }
 
-main > section:nth-of-type(1) section a div:last-of-type h4{
+main>section:nth-of-type(1) section a div:last-of-type h4 {
     color: #FFFBF4;
     margin: 0em;
     padding: 0em;
 }
 
 
-main > section:nth-of-type(1) section a div:last-of-type cite{
+main>section:nth-of-type(1) section a div:last-of-type cite {
     color: #FFFBF4;
     background-color: var(--primary-clr);
     padding: .3em 1em;
@@ -118,20 +118,20 @@ main > section:nth-of-type(1) section a div:last-of-type cite{
 
 /* hover over section */
 
-main > section:nth-of-type(1) section a:hover div:last-of-type{
-    clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+main>section:nth-of-type(1) section a:hover div:last-of-type {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-main > section:nth-of-type(1) section a:hover div:first-of-type img{
+main>section:nth-of-type(1) section a:hover div:first-of-type img {
     opacity: .2;
 }
 
 
-main > section:nth-of-type(1) section a:focus div:last-of-type{
-    clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+main>section:nth-of-type(1) section a:focus div:last-of-type {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-main > section:nth-of-type(1) section a:focus div:first-of-type img{
+main>section:nth-of-type(1) section a:focus div:first-of-type img {
     opacity: .2;
 }
 
@@ -140,48 +140,49 @@ main > section:nth-of-type(1) section a:focus div:first-of-type img{
 
 /* Right projects */
 
-main > section:nth-of-type(1) .rightProject{
+main>section:nth-of-type(1) .rightProject {
     width: calc(100vw - 6em);
     display: flex;
     justify-content: end;
     margin: 0em;
 }
 
-main > section:nth-of-type(1) .rightProject a, section:nth-of-type(2) .rightProject img{
+main>section:nth-of-type(1) .rightProject a,
+section:nth-of-type(2) .rightProject img {
     width: max-content;
 }
 
-main > section:nth-of-type(1) .rightProject a{
+main>section:nth-of-type(1) .rightProject a {
     width: max-content;
 }
 
 
 
 /* Button to all projects */
-main > section:nth-of-type(1) div{
+main>section:nth-of-type(1) div {
     display: flex;
     justify-content: center;
     margin-top: var(--spacer-md);
 }
 
-main > section:nth-of-type(1) div .bordera{
+main>section:nth-of-type(1) div .bordera {
     width: max-content;
     border-color: var(--txt-clr);
 }
 
-main > section:nth-of-type(1) div .bordera:hover{
+main>section:nth-of-type(1) div .bordera:hover {
     border-color: var(--txt-clr);
     margin-bottom: 2em;
 }
 
-main > section:nth-of-type(1) div .bordera a{
+main>section:nth-of-type(1) div .bordera a {
     background-color: var(--txt-clr);
     color: var(--bg-color);
 }
 
 
 
-main > section:nth-of-type(1) div .bordera a img{
+main>section:nth-of-type(1) div .bordera a img {
     width: 12%;
     mix-blend-mode: difference;
 }
@@ -207,25 +208,25 @@ main > section:nth-of-type(1) div .bordera a img{
     section:nth-of-type(1) section a div:first-of-type {
         width: 43vw;
         height: 80vh;
-      }
+    }
 
     section:nth-of-type(1) section a div:first-of-type img {
         width: 43vw;
         height: 80vh;
-      }
+    }
 
 
-      section:nth-of-type(1) section a div:last-of-type h3{
+    section:nth-of-type(1) section a div:last-of-type h3 {
         font-size: var(--fs-4);
     }
-    
-    section:nth-of-type(1) section a div:last-of-type h4{
+
+    section:nth-of-type(1) section a div:last-of-type h4 {
         font-size: var(--fs-5);
 
     }
-    
-    
-    section:nth-of-type(1) section a div:last-of-type cite{
+
+
+    section:nth-of-type(1) section a div:last-of-type cite {
         font-size: 1em;
     }
 }
@@ -234,35 +235,35 @@ main > section:nth-of-type(1) div .bordera a img{
 /* MAX WIDTH: 900PX */
 
 @media only screen and (max-width: 900px) {
-    main > img{
+    main>img {
         height: 70vh;
         top: 40%;
     }
 
-    .scrollbrain{
+    .scrollbrain {
         height: 70vh;
         top: 60%;
         left: 55%;
     }
 
 
-    section:nth-of-type(1){
+    section:nth-of-type(1) {
         margin: var(--spacer-xl) 1em;
     }
 
     section:nth-of-type(1) .rightProject {
         width: calc(100vw - 3em);
-      }
+    }
 
     section:nth-of-type(1) section a div:first-of-type {
         width: 45vw;
         height: 80vh;
-      }
+    }
 
     section:nth-of-type(1) section a div:first-of-type img {
         width: 45vw;
         height: 80vh;
-      }
+    }
 
 
 }
@@ -272,12 +273,12 @@ main > section:nth-of-type(1) div .bordera a img{
 
 
 @media only screen and (max-width: 750px) {
-    main > img{
+    main>img {
         height: 60vh;
         top: 35%;
     }
 
-    .scrollbrain{
+    .scrollbrain {
         height: 60vh;
         top: 60%;
         left: 55%;
@@ -287,23 +288,23 @@ main > section:nth-of-type(1) div .bordera a img{
     section:nth-of-type(1) section a div:first-of-type {
         width: 92vw;
         height: 50vh;
-      }
+    }
 
     section:nth-of-type(1) section a div:first-of-type img {
         width: 92vw;
         height: 50vh;
-      }
+    }
 
-     section:nth-of-type(1) section a{
+    section:nth-of-type(1) section a {
         margin-top: var(--spacer);
     }
 
     section:nth-of-type(1) .rightProject {
         width: calc(100vw - 1.9em);
-      }
+    }
 
 
-    section:nth-of-type(1) section a div:last-of-type cite{
+    section:nth-of-type(1) section a div:last-of-type cite {
         display: none;
     }
 
@@ -312,21 +313,19 @@ main > section:nth-of-type(1) div .bordera a img{
 
 /* MAX WIDTH: 650PX */
 
-@media only screen and (max-width: 650px) {
-
-}
+@media only screen and (max-width: 650px) {}
 
 
 
 /* MAX WIDTH: 600PX */
 
 @media only screen and (max-width: 600px) {
-    main > img{
+    main>img {
         height: 45vh;
         top: 30%;
     }
 
-    .scrollbrain{
+    .scrollbrain {
         height: 45vh;
         top: 60%;
     }
@@ -337,13 +336,13 @@ main > section:nth-of-type(1) div .bordera a img{
 /* MAX WIDTH: 450PX */
 
 @media only screen and (max-width: 450px) {
-    main > img{
+    main>img {
         height: 37vh;
         top: 30%;
         left: 63%;
     }
 
-    .scrollbrain{
+    .scrollbrain {
         height: 37vh;
         top: 55%;
         left: 52%;
