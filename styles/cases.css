@@ -205,28 +205,28 @@ main>section:nth-of-type(1) div .bordera a img {
 
 
 @media only screen and (max-width: 1100px) {
-    section:nth-of-type(1) section a div:first-of-type {
+    main > section:nth-of-type(1) section a div:first-of-type {
         width: 43vw;
         height: 80vh;
     }
 
-    section:nth-of-type(1) section a div:first-of-type img {
+    main > section:nth-of-type(1) section a div:first-of-type img {
         width: 43vw;
         height: 80vh;
     }
 
 
-    section:nth-of-type(1) section a div:last-of-type h3 {
+    main > section:nth-of-type(1) section a div:last-of-type h3 {
         font-size: var(--fs-4);
     }
 
-    section:nth-of-type(1) section a div:last-of-type h4 {
+    main > section:nth-of-type(1) section a div:last-of-type h4 {
         font-size: var(--fs-5);
 
     }
 
 
-    section:nth-of-type(1) section a div:last-of-type cite {
+    main > section:nth-of-type(1) section a div:last-of-type cite {
         font-size: 1em;
     }
 }
@@ -247,20 +247,20 @@ main>section:nth-of-type(1) div .bordera a img {
     }
 
 
-    section:nth-of-type(1) {
+    main > section:nth-of-type(1) {
         margin: var(--spacer-xl) 1em;
     }
 
-    section:nth-of-type(1) .rightProject {
+    main > section:nth-of-type(1) .rightProject {
         width: calc(100vw - 3em);
     }
 
-    section:nth-of-type(1) section a div:first-of-type {
+    main > section:nth-of-type(1) section a div:first-of-type {
         width: 45vw;
         height: 80vh;
     }
 
-    section:nth-of-type(1) section a div:first-of-type img {
+    main > section:nth-of-type(1) section a div:first-of-type img {
         width: 45vw;
         height: 80vh;
     }
@@ -285,26 +285,26 @@ main>section:nth-of-type(1) div .bordera a img {
 
     }
 
-    section:nth-of-type(1) section a div:first-of-type {
+    main > section:nth-of-type(1) section a div:first-of-type {
         width: 92vw;
         height: 50vh;
     }
 
-    section:nth-of-type(1) section a div:first-of-type img {
+    main > section:nth-of-type(1) section a div:first-of-type img {
         width: 92vw;
         height: 50vh;
     }
 
-    section:nth-of-type(1) section a {
+    main > section:nth-of-type(1) section a {
         margin-top: var(--spacer);
     }
 
-    section:nth-of-type(1) .rightProject {
+    main > section:nth-of-type(1) .rightProject {
         width: calc(100vw - 1.9em);
     }
 
 
-    section:nth-of-type(1) section a div:last-of-type cite {
+    main > section:nth-of-type(1) section a div:last-of-type cite {
         display: none;
     }
 
@@ -313,7 +313,7 @@ main>section:nth-of-type(1) div .bordera a img {
 
 /* MAX WIDTH: 650PX */
 
-@media only screen and (max-width: 650px) {}
+/* @media only screen and (max-width: 650px) {} */
 
 
 
