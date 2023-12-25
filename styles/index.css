@@ -498,8 +498,6 @@ main > section:nth-of-type(3) > div > div .bordera a:hover img{
 
 @media only screen and (min-width: 1600px) {
     section:first-of-type h2{
-        font-size: clamp(4rem, 1.4286rem + 11.4286vw, 10rem);    
-        margin: 0em 0em 0.2em 0em;
         width: 20%;
     }
 }

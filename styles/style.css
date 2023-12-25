@@ -401,25 +401,41 @@ header nav:first-of-type ul{
     flex-direction: row;
     gap: var(--spacer);
 }
-header nav:first-of-type ul li button{
+header nav:first-of-type ul li button,
+header nav:first-of-type ul li a{
     cursor: pointer;
-    padding: 0.8em 0.8em 0.7em 0.8em;
+    padding: 0.7em;
     background-color: var(--grey-tint2);
     border: none;
     border-radius: 50em;
     transition: 0.3s;
+    position: relative;
+    float: left;
+}
+
+header nav:first-of-type ul li a{
+    padding: 0.6em 0.5em 0.8em 0.5em;
 }
 
 
 header nav:first-of-type ul li button:hover,
-header nav:first-of-type ul li button:focus{
+header nav:first-of-type ul li button:focus,
+header nav:first-of-type ul li a:hover,
+header nav:first-of-type ul li a:focus{
     background-color: var(--primary-clr);
 }
 
 
-header nav:first-of-type ul li button img{
+header nav:first-of-type ul li img{
     height: 1.5em;
+    width: 1.5em;
     transition: 0.3s ease-in-out;
+    display: block;
+}
+
+
+header nav:first-of-type ul li:nth-of-type(1) img{
+    height: 1.1em;
 }
 
 
@@ -443,7 +459,7 @@ header nav:nth-of-type(2) ul{
     gap: var(--spacer-md);
 }
 
-header a{
+header nav:nth-of-type(2) ul li a{
     transition: 0.3s;
     background-image:
     linear-gradient(
@@ -461,13 +477,13 @@ header a{
 
 
 
-header a:hover,
-header a:focus,
-header a.focused {
+header nav:nth-of-type(2) ul li a:hover,
+header nav:nth-of-type(2) ul li a:focus,
+header nav:nth-of-type(2) ul li a.focused {
     background-position:left bottom;
 }
 
-header a::before {
+header nav:nth-of-type(2) ul li a::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -481,16 +497,16 @@ header a::before {
     transition: transform .3s ease-in-out;
   }
 
-header a:hover::before,
-header a:focus::before,
-header a.focused::before {
+header nav:nth-of-type(2) ul li a:hover::before,
+header nav:nth-of-type(2) ul li a:focus::before,
+header nav:nth-of-type(2) ul li a.focused::before {
     transform-origin: left;
     transform: scaleX(1) rotate(-2deg);
   }
 
 /* Button menu */
 
-header nav:nth-of-type(2) button {
+header nav:nth-of-type(2) button{
 	z-index: 100;
 	position: relative;
 	cursor: pointer;
@@ -498,7 +514,7 @@ header nav:nth-of-type(2) button {
 	border: none;
 	height: 2em;
 	width: 4em;
-	display: flex;
+	/* display: flex; */
 	flex-direction: column;
 	justify-content: space-between;
 	transform: scaleX(-1);
@@ -668,7 +684,9 @@ header nav:last-of-type > ul li a{
     font-size: var(--fs-4);
 }
 
-header nav:last-of-type > ul li a::before{
+header nav:last-of-type > ul li a::before,
+header nav:last-of-type > ul li a.focused x::before
+{
     height: 8px;
 }
 

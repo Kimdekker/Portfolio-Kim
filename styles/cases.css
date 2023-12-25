@@ -185,3 +185,167 @@ main > section:nth-of-type(1) div .bordera a img{
     width: 12%;
     mix-blend-mode: difference;
 }
+
+
+
+
+
+
+
+
+
+/*******************/
+/* MEDIA QUERIES */
+/*****************/
+
+
+
+/* MIN WIDTH: 1100PX */
+
+
+@media only screen and (max-width: 1100px) {
+    section:nth-of-type(1) section a div:first-of-type {
+        width: 43vw;
+        height: 80vh;
+      }
+
+    section:nth-of-type(1) section a div:first-of-type img {
+        width: 43vw;
+        height: 80vh;
+      }
+
+
+      section:nth-of-type(1) section a div:last-of-type h3{
+        font-size: var(--fs-4);
+    }
+    
+    section:nth-of-type(1) section a div:last-of-type h4{
+        font-size: var(--fs-5);
+
+    }
+    
+    
+    section:nth-of-type(1) section a div:last-of-type cite{
+        font-size: 1em;
+    }
+}
+
+
+/* MAX WIDTH: 900PX */
+
+@media only screen and (max-width: 900px) {
+    main > img{
+        height: 70vh;
+        top: 40%;
+    }
+
+    .scrollbrain{
+        height: 70vh;
+        top: 60%;
+        left: 55%;
+    }
+
+
+    section:nth-of-type(1){
+        margin: var(--spacer-xl) 1em;
+    }
+
+    section:nth-of-type(1) .rightProject {
+        width: calc(100vw - 3em);
+      }
+
+    section:nth-of-type(1) section a div:first-of-type {
+        width: 45vw;
+        height: 80vh;
+      }
+
+    section:nth-of-type(1) section a div:first-of-type img {
+        width: 45vw;
+        height: 80vh;
+      }
+
+
+}
+
+
+/* MAX WIDTH: 750PX */
+
+
+@media only screen and (max-width: 750px) {
+    main > img{
+        height: 60vh;
+        top: 35%;
+    }
+
+    .scrollbrain{
+        height: 60vh;
+        top: 60%;
+        left: 55%;
+
+    }
+
+    section:nth-of-type(1) section a div:first-of-type {
+        width: 92vw;
+        height: 50vh;
+      }
+
+    section:nth-of-type(1) section a div:first-of-type img {
+        width: 92vw;
+        height: 50vh;
+      }
+
+     section:nth-of-type(1) section a{
+        margin-top: var(--spacer);
+    }
+
+    section:nth-of-type(1) .rightProject {
+        width: calc(100vw - 1.9em);
+      }
+
+
+    section:nth-of-type(1) section a div:last-of-type cite{
+        display: none;
+    }
+
+}
+
+
+/* MAX WIDTH: 650PX */
+
+@media only screen and (max-width: 650px) {
+
+}
+
+
+
+/* MAX WIDTH: 600PX */
+
+@media only screen and (max-width: 600px) {
+    main > img{
+        height: 45vh;
+        top: 30%;
+    }
+
+    .scrollbrain{
+        height: 45vh;
+        top: 60%;
+    }
+
+}
+
+
+/* MAX WIDTH: 450PX */
+
+@media only screen and (max-width: 450px) {
+    main > img{
+        height: 37vh;
+        top: 30%;
+        left: 63%;
+    }
+
+    .scrollbrain{
+        height: 37vh;
+        top: 55%;
+        left: 52%;
+    }
+}

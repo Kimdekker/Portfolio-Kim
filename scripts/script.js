@@ -21,19 +21,19 @@ window.addEventListener('load', function() {
 
 
 //Dark light mode toggle
-var darkModeSwitch = document.querySelector('header nav ul li:first-of-type button');
+var darkModeSwitch = document.querySelector('header nav ul li:nth-of-type(2) button');
 
 darkModeSwitch.onclick = switchTheme;
 
 // Check local storage for dark mode preference on page load
 if (localStorage.getItem('darkMode') === 'enabled') {
     document.body.classList.add('darkmode');
-    document.querySelector('header nav ul li:first-of-type button img').classList.add('upsidedown');
+    document.querySelector('header nav ul li:nth-of-type(2) button img').classList.add('upsidedown');
 }
 
 function switchTheme() {
     var bodySwitchColor = document.querySelector('body');
-    var iconDarkmode = document.querySelector('header nav ul li:first-of-type button img');
+    var iconDarkmode = document.querySelector('header nav ul li:nth-of-type(2) button img');
 
     bodySwitchColor.classList.toggle('darkmode');
     iconDarkmode.classList.toggle('upsidedown');
