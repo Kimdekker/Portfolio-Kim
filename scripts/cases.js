@@ -1,5 +1,3 @@
-console.log("Hello theyer");
-
 //Observer for projects
 
 //FIRST
@@ -15,7 +13,7 @@ const observerCases = new IntersectionObserver(entries => {
   threshold: 0.1
 });
 
-observerCases.observe(observerCases);
+observerCases.observe(flyInUnderCases);
 
 
 
@@ -32,7 +30,7 @@ const observerScdCases = new IntersectionObserver(entries => {
   threshold: 0.1
 });
 
-observerScdCases.observe(observerScdCases);
+observerScdCases.observe(flyInUnderScdCases);
 
 
 
@@ -49,4 +47,4 @@ const observerTrdCases = new IntersectionObserver(entries => {
   threshold: 0.2
 });
 
-observerTrdCases.observe(observerTrdCases);
+observerTrdCases.observe(flyInUnderTrdCases);

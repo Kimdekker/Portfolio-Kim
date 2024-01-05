@@ -42,6 +42,8 @@ main>section:first-of-type {
     position: relative;
 }
 
+
+
 main>section:first-of-type>section {
     position: absolute;
     bottom: 5em;

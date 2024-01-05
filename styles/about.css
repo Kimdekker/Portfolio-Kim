@@ -1,0 +1,173 @@
+main>h1 {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+main>div {
+    margin: var(--spacer) 3em 0em 3em;
+}
+
+/****************/
+/* sidebar nav */
+/**************/
+
+main > div{
+    display: flex;
+}
+
+main > div > aside{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 5em;
+    height: max-content;
+    width: 30vw;
+}
+
+main > div > aside nav ul li a{
+    transition: 0.3s;
+    background-image:
+        linear-gradient(to left,
+            var(--txt-clr) 50%,
+            var(--primary-clr) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 0.3s;
+
+    text-align: left;
+    padding: 0em;
+    margin: 0em 0em var(--spacer-md) 0em;
+    width: max-content;
+}
+
+main > div > aside nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--primary-clr);
+    bottom: -0.2em;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0) rotate(-2deg);
+    transition: transform .3s ease-in-out;
+    color: var(--primary-clr);
+}
+
+main > div > aside nav ul li a:hover,
+main > div > aside nav ul li a:focus,
+main > div > aside nav ul li a.focused {
+    background-position: left bottom;
+}
+
+main > div > aside nav ul li a:hover::before,
+main > div > aside nav ul li a:focus::before,
+main > div > aside nav ul li a.focused::before {
+    transform-origin: left;
+    transform: scaleX(1) rotate(-2deg);
+}
+
+/***********************/
+/* Right left columns */
+/*********************/
+
+main > div > div{
+    margin-left: var(--spacer-lg);
+}
+
+main > div > div > section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacer-lg);
+    margin-bottom: var(--spacer-xl);
+}
+
+main > div > div > section h2{
+    margin: 0em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************/
+/* MEDIA QUERIES */
+/*****************/
+
+
+/* FOR TOUCHSCREEN */
+
+/* @media (hover: none) {
+
+} */
+
+
+
+/* MIN WIDTH: 1600PX */
+
+/* @media only screen and (min-width: 1600px) {
+} */
+
+
+
+/* MIN WIDTH: 1100PX */
+
+
+/* @media only screen and (max-width: 1100px) {
+} */
+
+
+/* MAX WIDTH: 900PX */
+
+@media only screen and (max-width: 900px) {
+    main > div {
+        margin: var(--spacer-xl) 1em;
+    }
+
+}
+
+
+/* MAX WIDTH: 750PX */
+
+
+/* @media only screen and (max-width: 750px) {
+
+} */
+
+
+/* MAX WIDTH: 650PX */
+
+/* @media only screen and (max-width: 650px) {
+
+} */
+
+
+
+/* MAX WIDTH: 600PX */
+
+/* @media only screen and (max-width: 600px) {
+} */
+
+
+/* MAX WIDTH: 450PX */
+
+/* @media only screen and (max-width: 450px) {
+} */

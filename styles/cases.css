@@ -283,6 +283,21 @@ main>section:last-of-type>div .bordera a:hover img {
 /* MEDIA QUERIES */
 /*****************/
 
+/* FOR TOUCHSCREEN */
+
+@media (hover: none) {
+    main > section:nth-of-type(1) section a div:last-of-type {
+        position: absolute;
+        bottom: 0;
+        padding: var(--spacer-md);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        display: inline-block;
+        transition: 0.6s ease-in-out;
+        background: linear-gradient(0deg, #171614 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+}
+
 
 
 /* MAX WIDTH: 1100PX */
@@ -324,16 +339,9 @@ main>section:last-of-type>div .bordera a:hover img {
 
 @media only screen and (max-width: 900px) {
     main>img {
-        height: 70vh;
-        top: 40%;
+        height: 60vh;
+        top: 50%;
     }
-
-    .scrollbrain {
-        height: 70vh;
-        top: 60%;
-        left: 55%;
-    }
-
 
     main > section:nth-of-type(1) {
         margin: var(--spacer-xl) 1em;
@@ -360,21 +368,103 @@ main>section:last-of-type>div .bordera a:hover img {
 
 }
 
+/* MEDIA QUERIES > HEIGHT*/
+
+/* MAX HEIGHT: 820PX */
+
+
+@media only screen and (max-height: 820px),
+            screen and (max-width: 900px) {
+    main>section:nth-of-type(1) section a{
+        margin-top: -20em;
+    }
+}
+
+/* MAX HEIGHT: 750PX */
+
+
+@media only screen and (max-height: 750px),
+screen and (max-width: 900px)  {
+    main>section:nth-of-type(1) section a{
+        margin-top: -18em;
+    }
+}
+
+
+/* MAX HEIGHT: 650PX */
+
+
+@media only screen and (max-height: 650px),
+screen and (max-width: 900px)  {
+    main>section:nth-of-type(1) section a{
+        margin-top: -16em;
+    }
+}
+
+
+/* MAX HEIGHT: 580PX */
+
+
+@media only screen and (max-height: 580px),
+screen and (max-width: 900px)  {
+    main>section:nth-of-type(1) section a{
+        margin-top: -14em;
+    }
+}
+
+/* MAX HEIGHT: 500PX */
+
+
+@media only screen and (max-height: 500px),
+screen and (max-width: 900px)  {
+    main>section:nth-of-type(1) section a{
+        margin-top: -12em;
+    }
+}
+
+
+/* MAX HEIGHT: 400PX */
+
+
+@media only screen and (max-height: 400px),
+screen and (max-width: 900px)  {
+    main>section:nth-of-type(1) section a{
+        margin-top: -10em;
+    }
+}
+
+
+/* MAX HEIGHT: 330PX */
+
+
+@media only screen and (max-height: 330px),
+screen and (max-width: 900px)  {
+    main>section:nth-of-type(1) section a{
+        margin-top: -8em;
+    }
+}
+
+
+/* MAX HEIGHT: 250PX */
+
+
+@media only screen and (max-height: 250px),
+screen and (max-width: 900px)  {
+    main>section:nth-of-type(1) section a{
+        margin-top: -6em;
+    }
+}
+
+
+
+
 
 /* MAX WIDTH: 750PX */
 
 
 @media only screen and (max-width: 750px) {
     main>img {
-        height: 60vh;
-        top: 35%;
-    }
-
-    .scrollbrain {
-        height: 60vh;
-        top: 60%;
-        left: 55%;
-
+        height: 40vh;
     }
 
     main > section:nth-of-type(1) section a div:first-of-type {
@@ -414,35 +504,12 @@ main>section:last-of-type>div .bordera a:hover img {
 
 
 
-/* MAX WIDTH: 600PX */
-
-@media only screen and (max-width: 600px) {
-    main>img {
-        height: 45vh;
-        top: 30%;
-    }
-
-    .scrollbrain {
-        height: 45vh;
-        top: 60%;
-    }
-
-}
-
 
 /* MAX WIDTH: 450PX */
 
 @media only screen and (max-width: 450px) {
     main>img {
         height: 37vh;
-        top: 30%;
-        left: 63%;
-    }
-
-    .scrollbrain {
-        height: 37vh;
-        top: 55%;
-        left: 52%;
     }
 
     main>section:last-of-type>div {
@@ -452,83 +519,3 @@ main>section:last-of-type>div .bordera a:hover img {
 
 
 
-/**************************/
-/* MEDIA QUERIES > HEIGHT*/
-/************************/
-
-/* MAX HEIGHT: 820PX */
-
-
-@media only screen and (max-height: 820px) {
-    main>section:nth-of-type(1) section a{
-        margin-top: -20em;
-    }
-}
-
-/* MAX HEIGHT: 750PX */
-
-
-@media only screen and (max-height: 750px) {
-    main>section:nth-of-type(1) section a{
-        margin-top: -18em;
-    }
-}
-
-
-/* MAX HEIGHT: 650PX */
-
-
-@media only screen and (max-height: 650px) {
-    main>section:nth-of-type(1) section a{
-        margin-top: -16em;
-    }
-}
-
-
-/* MAX HEIGHT: 580PX */
-
-
-@media only screen and (max-height: 580px) {
-    main>section:nth-of-type(1) section a{
-        margin-top: -14em;
-    }
-}
-
-/* MAX HEIGHT: 500PX */
-
-
-@media only screen and (max-height: 500px) {
-    main>section:nth-of-type(1) section a{
-        margin-top: -12em;
-    }
-}
-
-
-/* MAX HEIGHT: 400PX */
-
-
-@media only screen and (max-height: 400px) {
-    main>section:nth-of-type(1) section a{
-        margin-top: -10em;
-    }
-}
-
-
-/* MAX HEIGHT: 330PX */
-
-
-@media only screen and (max-height: 330px) {
-    main>section:nth-of-type(1) section a{
-        margin-top: -8em;
-    }
-}
-
-
-/* MAX HEIGHT: 250PX */
-
-
-@media only screen and (max-height: 250px) {
-    main>section:nth-of-type(1) section a{
-        margin-top: -6em;
-    }
-}
