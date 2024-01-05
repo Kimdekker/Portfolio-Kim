@@ -809,9 +809,13 @@ footer section:nth-of-type(2) ul li {
 }
 
 footer section:nth-of-type(2) ul li a img {
-    padding: .7em .7em .4em .7em;
-    transition: .3s ease-in-out;
+    padding: .6em .1em .4em .6em;
     mix-blend-mode: difference;
+    width: 80%;
+}
+
+footer section:nth-of-type(2) ul li:first-of-type a img {
+    padding: .6em .1em .4em .7em;
 }
 
 

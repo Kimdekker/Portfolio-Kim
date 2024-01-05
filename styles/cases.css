@@ -64,6 +64,35 @@ main>section:nth-of-type(1) section:first-of-type a {
 }
 
 
+/* Intersection observer */
+
+.hidden {
+    opacity: 0;
+    transform: translateX(0em) scale(0);
+    transition: opacity .5s ease-in-out, transform 1s ease-in-out, filter 1s ease-in-out;
+    filter: blur(5em);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0em) scale(1);
+    filter: blur(0);
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
 /* container for the image */
 main>section:nth-of-type(1) section a div:first-of-type {
     position: relative;
@@ -188,7 +217,62 @@ main>section:nth-of-type(1) div .bordera a img {
 }
 
 
+/**************************/
+/* ABOUT ME INSIDE INDEX */
+/************************/
 
+main>section:last-of-type {
+    display: flex;
+    justify-content: center;
+}
+
+
+main>section:last-of-type>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    background-color: var(--txt-clr);
+    padding: var(--spacer-lg);
+    border-radius: 2em;
+}
+
+main>section:last-of-type>div h2 {
+    color: var(--bg-color);
+    font-size: var(--fs-4);
+    text-align: center;
+    margin: 0em;
+}
+
+
+
+main>section:last-of-type>div p {
+    color: var(--bg-color);
+    font-weight: var(--fw-t);
+    text-align: center;
+}
+
+main>section:last-of-type>div .bordera {
+    width: max-content;
+    border-color: var(--bg-color);
+    margin-top: var(--spacer-md);
+}
+
+main>section:last-of-type>div .bordera a {
+    background-color: var(--bg-color);
+    color: var(--txt-clr);
+}
+
+main>section:last-of-type>div .bordera a img {
+    width: 1.7em;
+    margin-right: -0.1em;
+    mix-blend-mode: difference;
+    transition: 0.3s ease-in-out;
+}
+
+main>section:last-of-type>div .bordera a:hover img {
+    transform: rotate(20deg);
+}
 
 
 
@@ -201,7 +285,7 @@ main>section:nth-of-type(1) div .bordera a img {
 
 
 
-/* MIN WIDTH: 1100PX */
+/* MAX WIDTH: 1100PX */
 
 
 @media only screen and (max-width: 1100px) {
@@ -228,6 +312,10 @@ main>section:nth-of-type(1) div .bordera a img {
 
     main > section:nth-of-type(1) section a div:last-of-type cite {
         font-size: 1em;
+    }
+
+    main>section:last-of-type>div {
+        width: 90.5vw;
     }
 }
 
@@ -263,6 +351,10 @@ main>section:nth-of-type(1) div .bordera a img {
     main > section:nth-of-type(1) section a div:first-of-type img {
         width: 45vw;
         height: 80vh;
+    }
+
+    main>section:last-of-type>div {
+        width: 96vw;
     }
 
 
@@ -313,7 +405,12 @@ main>section:nth-of-type(1) div .bordera a img {
 
 /* MAX WIDTH: 650PX */
 
-/* @media only screen and (max-width: 650px) {} */
+@media only screen and (max-width: 650px) {
+    main>section:last-of-type>div {
+        width: 95vw;
+        flex-direction: column;
+    }
+}
 
 
 
@@ -346,5 +443,92 @@ main>section:nth-of-type(1) div .bordera a img {
         height: 37vh;
         top: 55%;
         left: 52%;
+    }
+
+    main>section:last-of-type>div {
+        width: 93vw;
+    }
+}
+
+
+
+/**************************/
+/* MEDIA QUERIES > HEIGHT*/
+/************************/
+
+/* MAX HEIGHT: 820PX */
+
+
+@media only screen and (max-height: 820px) {
+    main>section:nth-of-type(1) section a{
+        margin-top: -20em;
+    }
+}
+
+/* MAX HEIGHT: 750PX */
+
+
+@media only screen and (max-height: 750px) {
+    main>section:nth-of-type(1) section a{
+        margin-top: -18em;
+    }
+}
+
+
+/* MAX HEIGHT: 650PX */
+
+
+@media only screen and (max-height: 650px) {
+    main>section:nth-of-type(1) section a{
+        margin-top: -16em;
+    }
+}
+
+
+/* MAX HEIGHT: 580PX */
+
+
+@media only screen and (max-height: 580px) {
+    main>section:nth-of-type(1) section a{
+        margin-top: -14em;
+    }
+}
+
+/* MAX HEIGHT: 500PX */
+
+
+@media only screen and (max-height: 500px) {
+    main>section:nth-of-type(1) section a{
+        margin-top: -12em;
+    }
+}
+
+
+/* MAX HEIGHT: 400PX */
+
+
+@media only screen and (max-height: 400px) {
+    main>section:nth-of-type(1) section a{
+        margin-top: -10em;
+    }
+}
+
+
+/* MAX HEIGHT: 330PX */
+
+
+@media only screen and (max-height: 330px) {
+    main>section:nth-of-type(1) section a{
+        margin-top: -8em;
+    }
+}
+
+
+/* MAX HEIGHT: 250PX */
+
+
+@media only screen and (max-height: 250px) {
+    main>section:nth-of-type(1) section a{
+        margin-top: -6em;
     }
 }
