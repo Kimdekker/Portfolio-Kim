@@ -1,3 +1,4 @@
+
 //Observer aside links
 const links = document.querySelectorAll('main > div > aside nav ul li a');
 const sections = document.querySelectorAll('main > div > div > section');
@@ -39,3 +40,4 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+

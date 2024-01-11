@@ -19,6 +19,7 @@ main>img {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     transition: 0.6s ease-in-out;
+    will-change: transform;
 }
 
 
@@ -70,6 +71,7 @@ main>section:nth-of-type(1) section:first-of-type a {
     opacity: 0;
     transform: translateX(0em) scale(0);
     transition: opacity .5s ease-in-out, transform 1s ease-in-out, filter 1s ease-in-out;
+    will-change: transform;
     filter: blur(5em);
 }
 
@@ -105,6 +107,7 @@ main>section:nth-of-type(1) section a div:first-of-type {
 main>section:nth-of-type(1) section a div:first-of-type img {
     border-radius: 2em;
     transition: 0.6s ease-in-out;
+    will-change: transform;
     width: 45vw;
     height: 80vh;
     object-fit: cover;
@@ -118,6 +121,7 @@ main>section:nth-of-type(1) section a div:last-of-type {
     clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
     display: inline-block;
     transition: 0.6s ease-in-out;
+    will-change: transform;
 }
 
 /* Inside the container with all the intel */
@@ -268,6 +272,7 @@ main>section:last-of-type>div .bordera a img {
     margin-right: -0.1em;
     mix-blend-mode: difference;
     transition: 0.3s ease-in-out;
+    will-change: transform;
 }
 
 main>section:last-of-type>div .bordera a:hover img {
@@ -293,6 +298,7 @@ main>section:last-of-type>div .bordera a:hover img {
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         display: inline-block;
         transition: 0.6s ease-in-out;
+        will-change: transform;
         background: linear-gradient(0deg, #171614 0%, rgba(0, 0, 0, 0) 100%);
     }
 

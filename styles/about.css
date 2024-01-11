@@ -32,6 +32,7 @@ main > div > aside{
 
 main > div > aside nav ul li a{
     transition: 0.3s;
+    will-change: transform;
     background-image:
         linear-gradient(to left,
             var(--txt-clr) 50%,
@@ -61,6 +62,7 @@ main > div > aside nav ul li a::before {
     transform-origin: right;
     transform: scaleX(0) rotate(-2deg);
     transition: transform .3s ease-in-out;
+    will-change: transform;
     color: var(--primary-clr);
 }
 
@@ -122,6 +124,7 @@ main > div > div > section > h2{
 main > div > div > section:first-of-type > section:nth-of-type(1){
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -150,6 +153,22 @@ main > div > div > section:first-of-type > section:nth-of-type(2){
 
 main > div > div > section:first-of-type > section:nth-of-type(2) img{
     width: 100%;
+    animation: float 3s ease-in-out infinite;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
 }
 
 main > div > div > section:first-of-type > section:nth-of-type(2) h3{
@@ -298,18 +317,10 @@ main > div > div > section:nth-of-type(7) section:nth-of-type(2) ul li::before {
 
 
 
+
 /*******************/
 /* MEDIA QUERIES */
 /*****************/
-
-
-/* FOR TOUCHSCREEN */
-
-/* @media (hover: none) {
-
-} */
-
-
 
 /* MAX WIDTH: 1600PX */
 
@@ -407,31 +418,3 @@ main > div > div > section:nth-of-type(7) section:nth-of-type(2) ul li::before {
     }
 
 }
-
-
-/* MAX WIDTH: 750PX */
-
-
-/* @media only screen and (max-width: 750px) {
-
-} */
-
-
-/* MAX WIDTH: 650PX */
-
-/* @media only screen and (max-width: 650px) {
-
-} */
-
-
-
-/* MAX WIDTH: 600PX */
-
-/* @media only screen and (max-width: 600px) {
-} */
-
-
-/* MAX WIDTH: 450PX */
-
-/* @media only screen and (max-width: 450px) {
-} */
