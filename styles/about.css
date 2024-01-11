@@ -24,8 +24,10 @@ main > div > aside{
     position: sticky;
     position: -webkit-sticky;
     top: 5em;
-    height: max-content;
-    width: 30vw;
+    height: 80vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
 }
 
 main > div > aside nav ul li a{
@@ -98,13 +100,201 @@ main > div > div > section h2{
 
 
 
+/*******************/
+/* Inside content */
+/*****************/
+
+main > div > div > section > h2{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+
+
+/* First column */
+
+
+main > div > div > section:first-of-type > section:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+}
+
+
+main > div > div > section:first-of-type > section:nth-of-type(1) h2:not(strong){
+    font-size: var(--fs-6);
+    line-height: 1;
+}
+
+main > div > div > section:first-of-type > section:nth-of-type(1) h2 strong{
+    font-weight: 800;
+    font-size: clamp(4rem, 1.4286rem + 11.4286vw, 6rem);
+    padding-top: 20em;
+}
+
+main > div > div > section:first-of-type > section:nth-of-type(1) p{
+    font-size: var(--fs-p-bg);
+}
+
+
+
+main > div > div > section:first-of-type > section:nth-of-type(2){
+    display: flex;
+    align-items: center;
+}
+
+
+main > div > div > section:first-of-type > section:nth-of-type(2) img{
+    width: 100%;
+}
+
+main > div > div > section:first-of-type > section:nth-of-type(2) h3{
+    font-size: var(--fs-6);
+    margin: 1em 0em 0em 0em;
+}
+
+main > div > div > section:first-of-type > section:nth-of-type(2) p{
+    font-size: var(--fs-p-sm);
+}
 
 
 
 
+/* Second column */
+
+main > div > div > section:nth-of-type(2){
+    margin: 3em;
+    margin-bottom: 10em;
+}
+
+main > div > div > section:nth-of-type(2) section{
+    margin: 2em;
+}
+
+
+main > div > div > section:nth-of-type(2) > section:nth-of-type(1) h3{
+    font-size: var(--fs-6);
+}
+
+
+main > div > div > section:nth-of-type(2) > section:nth-of-type(2){
+    display: flex;
+    align-items: end;
+}
 
 
 
+/* Passion column */
+
+main > div > div > section:nth-of-type(3) > section:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+main > div > div > section:nth-of-type(3) > section:nth-of-type(2) h3{
+    font-size: var(--fs-6);
+}
+
+
+main > div > div > section:nth-of-type(3) > section:nth-of-type(1) img{
+    display: flex;
+    align-items: end;
+    width: 100%;
+}
+
+
+
+/* Things i like > pictures column */
+
+main > div > div > section:nth-of-type(4){
+    margin: 5em;
+    margin-bottom: var(--spacer);
+}
+
+
+main > div > div > section:nth-of-type(5) img{
+    width: 100%;
+}
+
+
+
+/* Awards table column */
+
+
+main > div > div > section:nth-of-type(6){
+    display: grid;
+    grid-template-columns: 1fr;    
+}
+
+main > div > div > section:nth-of-type(6) section{
+    place-self: center;
+    width: 70vw;
+}
+
+main > div > div > section:nth-of-type(6) section h2{
+    font-size: clamp(2rem, 0.6364rem + 5.8182vw, 5rem);
+}
+
+table{
+    width: max-content;
+    border-collapse: collapse;
+    place-self: center;
+    margin-top: var(--spacer-lg);
+}
+
+table tbody tr td{
+    padding: 1em 0em;
+}
+
+table tbody tr td:nth-of-type(2){
+    padding-left: 2em
+}
+
+table tbody tr td:first-of-type{
+    font-size: var(--fs-p-sm);
+}
+
+table tbody tr td span{
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: var(--grey-tint1);
+}
+
+table tbody tr{
+    border-top: 1px solid var(--txt-clr);
+}
+
+
+
+/* Dreams column */
+
+main > div > div > section:nth-of-type(7) section h3{
+    margin: 0em;
+    font-size: clamp(2rem, 1.5455rem + 1.9394vw, 3rem);}
+
+main > div > div > section:nth-of-type(7) section:nth-of-type(2) ul li{
+    margin-bottom: .3em;
+    font-family: var(--ff);
+    color: var(--txt-clr);
+    font-size: var(--fs-p);
+    font-weight: var(--fw-n);
+}
+
+main > div > div > section:nth-of-type(7) section:nth-of-type(2) ul li::before {
+    content: "\25AA";
+    color: var(--primary-clr);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    border-radius: 0em;
+  }
 
 
 
@@ -121,18 +311,54 @@ main > div > div > section h2{
 
 
 
-/* MIN WIDTH: 1600PX */
+/* MAX WIDTH: 1600PX */
 
-/* @media only screen and (min-width: 1600px) {
-} */
+@media only screen and (max-width: 1250px) {
+    main > div > div > section:nth-of-type(6) section{
+        width: 100%;
+    }
+
+    table{
+        width: auto;
+    }
+}
 
 
+/* MAX WIDTH: 1150PX */
 
-/* MIN WIDTH: 1100PX */
 
+@media only screen and (max-width: 1150px) {
+    main > div{
+        flex-direction: column;
+    }
 
-/* @media only screen and (max-width: 1100px) {
-} */
+    main > div > aside{
+        height: max-content;
+        width: max-content;
+        z-index: 100000;
+    }
+
+    main > div > aside nav ul{
+        display: flex;
+        gap: 1.5em;
+    }
+
+    main > div > aside > nav > ul{
+        overflow: scroll;
+        width: 90vw;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    main > div > aside > nav > ul::-webkit-scrollbar {
+        display: none;
+      }
+
+    main > div > div{
+        margin-left: 0em;
+    }
+}
+
 
 
 /* MAX WIDTH: 900PX */
@@ -140,6 +366,44 @@ main > div > div > section h2{
 @media only screen and (max-width: 900px) {
     main > div {
         margin: var(--spacer-xl) 1em;
+        margin-top: 0em;
+    }
+
+    main > div > aside > nav > ul{
+        width: 95vw;
+    }
+
+}
+
+
+
+/* MIN WIDTH: 850PX */
+
+
+@media only screen and (max-width: 850px) {
+    main > div > div > section{
+        grid-template-columns: 1fr;
+    }
+    
+    main > div > div > section h2{
+        margin: 0em;
+    }
+
+    main > div > div > section:nth-of-type(2){
+        margin: 0em 0em 2em 0em;
+    }
+
+    main > div > div > section:nth-of-type(2) section{
+        margin: 0em;
+    }
+
+    main > div > div > section:nth-of-type(4){
+        margin: 0em;
+    }
+
+    main > div > div > section:nth-of-type(5){
+        grid-template-columns: 1fr 1fr;
+        gap: 1em
     }
 
 }
