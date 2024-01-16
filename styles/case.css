@@ -52,17 +52,18 @@ main>div>a:hover span{
 }
 
 main>section:first-of-type{
-    margin-top: var(--spacer)!important;
+    margin: var(--spacer) 3em!important;
 }
 
 main>section:first-of-type>section:first-of-type>img{
     width: 100%;
+    border-radius: 1em;
 }
 
 main>section:first-of-type section:first-of-type ul{
     display: flex;
     gap: var(--spacer-lg);
-    margin: var(--spacer) 0em 0em var(--spacer-lg);
+    margin-top: var(--spacer);
 }
 
 main>section:first-of-type section:first-of-type ul li{
