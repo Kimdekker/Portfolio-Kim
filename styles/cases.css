@@ -98,7 +98,7 @@ main>section:nth-of-type(1) section:first-of-type a {
 /* container for the image */
 main>section:nth-of-type(1) section a div:first-of-type {
     position: relative;
-    background-color: #171614;
+    background-color: var(--txt-clr-hds);
     border-radius: 2em;
     width: 45vw;
     height: 80vh;
@@ -128,7 +128,7 @@ main>section:nth-of-type(1) section a div:last-of-type {
 main>section:nth-of-type(1) section a div:last-of-type h3 {
     margin: 0em;
     padding: 0em;
-    color: #FFFBF4;
+    color: var(--bg-color);
 }
 
 main>section:nth-of-type(1) section a div:last-of-type h4 {
