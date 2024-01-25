@@ -20,7 +20,7 @@ main > section{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacer-lg);
-    margin-bottom: var(--spacer-xl);
+    margin: var(--spacer-lg) 0em;
 }
 
 /* First section */

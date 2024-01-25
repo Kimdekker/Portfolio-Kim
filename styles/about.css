@@ -91,7 +91,6 @@ main > div > div > section{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacer-lg);
-    margin-bottom: var(--spacer-xl);
 }
 
 main > div > div > section h2{
@@ -186,8 +185,9 @@ main > div > div > section:first-of-type > section:nth-of-type(2) p{
 /* Second column */
 
 main > div > div > section:nth-of-type(2){
-    margin: 3em;
-    margin-bottom: 10em;
+    margin: 0em 2em;
+    padding-top: 4em;
+
 }
 
 main > div > div > section:nth-of-type(2) section{
@@ -208,6 +208,10 @@ main > div > div > section:nth-of-type(2) > section:nth-of-type(2){
 
 
 /* Passion column */
+
+main > div > div > section:nth-of-type(3){    
+    padding-top: 4em;
+}
 
 main > div > div > section:nth-of-type(3) > section:nth-of-type(2){
     display: flex;
@@ -234,6 +238,13 @@ main > div > div > section:nth-of-type(3) > section:nth-of-type(1) img{
 main > div > div > section:nth-of-type(4){
     margin: 5em;
     margin-bottom: var(--spacer);
+    padding: 4em 0em;
+}
+
+
+main > div > div > section:nth-of-type(4) h3{
+    font-size: var(--fs-6);
+    margin-top: -1em;
 }
 
 
@@ -248,7 +259,8 @@ main > div > div > section:nth-of-type(5) img{
 
 main > div > div > section:nth-of-type(6){
     display: grid;
-    grid-template-columns: 1fr;    
+    grid-template-columns: 1fr;   
+    padding-top: 4em; 
 }
 
 main > div > div > section:nth-of-type(6) section{
@@ -294,9 +306,15 @@ table tbody tr{
 
 /* Dreams column */
 
+main > div > div > section:nth-of-type(7){
+    padding-top: 4em;
+    margin-top: 4em;
+}
+
 main > div > div > section:nth-of-type(7) section h3{
     margin: 0em;
-    font-size: clamp(2rem, 1.5455rem + 1.9394vw, 3rem);}
+    font-size: clamp(2rem, 1.5455rem + 1.9394vw, 3rem);
+}
 
 main > div > div > section:nth-of-type(7) section:nth-of-type(2) ul li{
     margin-bottom: .3em;
