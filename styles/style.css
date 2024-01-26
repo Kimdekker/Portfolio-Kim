@@ -5,12 +5,15 @@
 *::after,
 *::before {
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 ::selection {
     color: var(--bg-color);
     background: var(--primary-clr);
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 

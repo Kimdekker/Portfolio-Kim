@@ -314,7 +314,8 @@ section:nth-of-type(2) section a div:first-of-type {
     background-color: var(--txt-clr-hds);
     border-radius: 2em;
     width: 45vw;
-    height: 80vh;
+    height: 0vh;
+    padding-bottom: 44vw;
 }
 
 section:nth-of-type(2) section a div:first-of-type img {
@@ -322,7 +323,7 @@ section:nth-of-type(2) section a div:first-of-type img {
     transition: 0.6s ease-in-out;
     will-change: transform;
     width: 45vw;
-    height: 80vh;
+    height: 45vw;
     object-fit: cover;
 }
 
@@ -565,6 +566,7 @@ main>section:nth-of-type(3)>div>div .bordera a:hover img {
         transition: 0.6s ease-in-out;
         will-change: transform;
         background: linear-gradient(0deg, #171614 0%, rgba(0, 0, 0, 0) 100%);
+        width: 100%;
     }
 
 }
@@ -591,12 +593,12 @@ main>section:nth-of-type(3)>div>div .bordera a:hover img {
 
     section:nth-of-type(2) section a div:first-of-type {
         width: 43vw;
-        height: 80vh;
+        padding-bottom: 42vw;
     }
 
     section:nth-of-type(2) section a div:first-of-type img {
         width: 43vw;
-        height: 80vh;
+        height: 43vw;
     }
 
 
@@ -616,6 +618,15 @@ main>section:nth-of-type(3)>div>div .bordera a:hover img {
 
     main>section:nth-of-type(3)>div {
         width: 90.5vw;
+    }
+}
+
+
+/* MAX WIDTH: 1000PX */
+
+@media only screen and (max-width: 1000px) {
+    section:nth-of-type(2) section a{
+        margin-top: -12em;
     }
 }
 
@@ -649,12 +660,12 @@ main>section:nth-of-type(3)>div>div .bordera a:hover img {
 
     section:nth-of-type(2) section a div:first-of-type {
         width: 45vw;
-        height: 80vh;
+        padding-bottom: 44vw;
     }
 
     section:nth-of-type(2) section a div:first-of-type img {
         width: 45vw;
-        height: 80vh;
+        height: 45vw;
     }
 
     main>section:nth-of-type(3)>div {
@@ -710,12 +721,12 @@ main>section:nth-of-type(3)>div>div .bordera a:hover img {
 
     section:nth-of-type(2) section a div:first-of-type {
         width: 92vw;
-        height: 50vh;
+        padding-bottom: 91vw;
     }
 
     section:nth-of-type(2) section a div:first-of-type img {
         width: 92vw;
-        height: 50vh;
+        height: 92vw;
     }
 
     section:nth-of-type(2) section a {

@@ -24,7 +24,9 @@ main>img {
 
 
 
-
+.video{
+    padding: var(--spacer-xl) 3em;
+}
 
 
 /**************************/
@@ -35,6 +37,7 @@ main>img {
 main>section:nth-of-type(1) {
     margin: var(--spacer-xl) 3em;
     position: relative;
+
 }
 
 /* Hide title*/
@@ -56,7 +59,7 @@ main>section:nth-of-type(1) section a {
     width: max-content;
     display: inline-block;
     animation: float 3s ease-in-out infinite;
-    margin-top: -22em;
+    margin-top: -20em;
     border-radius: 2em;
 }
 
@@ -101,7 +104,8 @@ main>section:nth-of-type(1) section a div:first-of-type {
     background-color: var(--txt-clr-hds);
     border-radius: 2em;
     width: 45vw;
-    height: 80vh;
+    height: 0vh;
+    padding-bottom: 44vw;
 }
 
 main>section:nth-of-type(1) section a div:first-of-type img {
@@ -109,7 +113,7 @@ main>section:nth-of-type(1) section a div:first-of-type img {
     transition: 0.6s ease-in-out;
     will-change: transform;
     width: 45vw;
-    height: 80vh;
+    height: 45vw;
     object-fit: cover;
 }
 
@@ -300,11 +304,18 @@ main>section:last-of-type>div .bordera a:hover img {
         transition: 0.6s ease-in-out;
         will-change: transform;
         background: linear-gradient(0deg, #171614 0%, rgba(0, 0, 0, 0) 100%);
+        width: 100%;
     }
 
 }
 
+/* MAX WIDTH: 1325px */
 
+@media only screen and (max-width: 1325px) {
+    main>section:nth-of-type(1) section a {
+        margin-top: -17em;
+    }
+}
 
 /* MAX WIDTH: 1100PX */
 
@@ -312,14 +323,17 @@ main>section:last-of-type>div .bordera a:hover img {
 @media only screen and (max-width: 1100px) {
     main > section:nth-of-type(1) section a div:first-of-type {
         width: 43vw;
-        height: 80vh;
+        padding-bottom: 42vw;
     }
 
     main > section:nth-of-type(1) section a div:first-of-type img {
         width: 43vw;
-        height: 80vh;
+        height: 43vw;
     }
 
+    main>section:nth-of-type(1) section a {
+        margin-top: -12em;
+    }
 
     main > section:nth-of-type(1) section a div:last-of-type h3 {
         font-size: var(--fs-4);
@@ -359,12 +373,12 @@ main>section:last-of-type>div .bordera a:hover img {
 
     main > section:nth-of-type(1) section a div:first-of-type {
         width: 45vw;
-        height: 80vh;
+        padding-bottom: 44vw;
     }
 
     main > section:nth-of-type(1) section a div:first-of-type img {
         width: 45vw;
-        height: 80vh;
+        height: 45vw;
     }
 
     main>section:last-of-type>div {
@@ -373,94 +387,6 @@ main>section:last-of-type>div .bordera a:hover img {
 
 
 }
-
-/* MEDIA QUERIES > HEIGHT*/
-
-/* MAX HEIGHT: 820PX */
-
-
-@media only screen and (max-height: 820px),
-            screen and (max-width: 900px) {
-    main>section:nth-of-type(1) section a{
-        margin-top: -20em;
-    }
-}
-
-/* MAX HEIGHT: 750PX */
-
-
-@media only screen and (max-height: 750px),
-screen and (max-width: 900px)  {
-    main>section:nth-of-type(1) section a{
-        margin-top: -18em;
-    }
-}
-
-
-/* MAX HEIGHT: 650PX */
-
-
-@media only screen and (max-height: 650px),
-screen and (max-width: 900px)  {
-    main>section:nth-of-type(1) section a{
-        margin-top: -16em;
-    }
-}
-
-
-/* MAX HEIGHT: 580PX */
-
-
-@media only screen and (max-height: 580px),
-screen and (max-width: 900px)  {
-    main>section:nth-of-type(1) section a{
-        margin-top: -14em;
-    }
-}
-
-/* MAX HEIGHT: 500PX */
-
-
-@media only screen and (max-height: 500px),
-screen and (max-width: 900px)  {
-    main>section:nth-of-type(1) section a{
-        margin-top: -12em;
-    }
-}
-
-
-/* MAX HEIGHT: 400PX */
-
-
-@media only screen and (max-height: 400px),
-screen and (max-width: 900px)  {
-    main>section:nth-of-type(1) section a{
-        margin-top: -10em;
-    }
-}
-
-
-/* MAX HEIGHT: 330PX */
-
-
-@media only screen and (max-height: 330px),
-screen and (max-width: 900px)  {
-    main>section:nth-of-type(1) section a{
-        margin-top: -8em;
-    }
-}
-
-
-/* MAX HEIGHT: 250PX */
-
-
-@media only screen and (max-height: 250px),
-screen and (max-width: 900px)  {
-    main>section:nth-of-type(1) section a{
-        margin-top: -6em;
-    }
-}
-
 
 
 
@@ -475,12 +401,13 @@ screen and (max-width: 900px)  {
 
     main > section:nth-of-type(1) section a div:first-of-type {
         width: 92vw;
-        height: 50vh;
+        padding-bottom: 91vw;
+
     }
 
     main > section:nth-of-type(1) section a div:first-of-type img {
         width: 92vw;
-        height: 50vh;
+        height: 92vw;
     }
 
     main > section:nth-of-type(1) section a {

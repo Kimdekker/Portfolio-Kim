@@ -436,3 +436,11 @@ main > div > div > section:nth-of-type(7) section:nth-of-type(2) ul li::before {
     }
 
 }
+
+
+
+@media only screen and (max-width: 750px) {
+    main > div > aside{
+        display: none;
+    }
+}
