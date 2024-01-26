@@ -119,9 +119,20 @@ main>section:first-of-type section:nth-of-type(2){
     padding: 0em 3em;
 }
 
-.video video{
+.video video, .video img{
     width: 100%;
     border-radius: var(--spacer);
+}
+
+
+#robin-ipad{
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacer-lg);
+}
+
+#robin-ipad img{
+    width: 40%;
 }
 
 
@@ -136,6 +147,7 @@ main>section:first-of-type section:nth-of-type(2){
 
 .two-img img, video{
     width: 100%;
+    height: max-content;
 }
 
 

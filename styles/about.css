@@ -12,7 +12,7 @@ main>div {
     margin: var(--spacer) 3em 0em 3em;
 }
 
-img{
+main>img{
     border-radius: 1em;
 }
 
