@@ -12,6 +12,10 @@ main>div {
     margin: var(--spacer) 3em 0em 3em;
 }
 
+img{
+    border-radius: 1em;
+}
+
 /****************/
 /* sidebar nav */
 /**************/
@@ -233,7 +237,7 @@ main > div > div > section:nth-of-type(3) > section:nth-of-type(1) img{
 
 
 
-/* Things i like > pictures column */
+/* Things i like */
 
 main > div > div > section:nth-of-type(4){
     margin: 5em;
@@ -247,9 +251,15 @@ main > div > div > section:nth-of-type(4) h3{
     margin-top: -1em;
 }
 
+/* Things i like > pictures column */
+
+main > div > div > section:nth-of-type(5){
+    gap: 1em;
+}
 
 main > div > div > section:nth-of-type(5) img{
     width: 100%;
+    margin-bottom: 1em;
 }
 
 
