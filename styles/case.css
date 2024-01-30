@@ -8,6 +8,7 @@ main>h1 {
     width: 1px;
 }
 
+
 /* ARROWS UNDER IMG */
 
 main li>a img{
@@ -80,6 +81,10 @@ main>section:first-of-type section:first-of-type ul li{
 main>section:first-of-type section:nth-of-type(2) h2{
     margin: 0em;
     font-size: clamp(3rem, 2.0909rem + 3.8788vw, 5rem);
+}
+
+.bigh2{
+    font-size: clamp(3rem, 2.6939rem + 1.3061vw, 4rem)!important;
 }
 
 main>section:first-of-type section:nth-of-type(2) p{
