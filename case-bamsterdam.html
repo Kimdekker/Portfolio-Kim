@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="assets/images/brain.png">
 
     <link href="styles/style.css" rel="stylesheet">
-    <link href="styles/cases.css" rel="stylesheet">
+    <link href="styles/case.css" rel="stylesheet">
 </head>
 
 <!--
@@ -20,7 +20,7 @@
 <body>
     <div class='cursor' id="cursor"></div>
 
-    <div class="loader-wrapper">
+    <!-- <div class="loader-wrapper">
         <div class="loader">
             <div class="box"></div>
             <div class="box"></div>
@@ -35,7 +35,7 @@
             <div class="box"></div>
             <div class="box"></div>
         </div>
-    </div>
+    </div> -->
 
     <header>
         <nav>
@@ -78,8 +78,171 @@
 
     <main>
         <!-- H1: Hidden for the eye, seen by screenreaders  -->
-        <h1>Cases that Kim Dekker has made</h1>
+        <h1>Casebrief: B. Amsterdam</h1>
 
+        <section>
+            <section>
+                <img src="./assets/images/B_homepage.jpg"
+                        alt="Desktop and mobile version of the start of the about page on the Yeti Motion project">
+                <ul>
+                    <li>Live <a aria-label="Go to the live B. Amsterdam events website" href="https://b-events.amsterdam/" target="_blank">Live website<img src="./assets/icons/arrow-link-icon.svg"
+                        alt="Icon for the blank link"></a></li>
+                    <li>Design <a aria-label="Go to the design of the B. Events website" href="https://xd.adobe.com/view/eea7ead2-858d-47d2-ad51-0023a197dbb6-bbf4/?fullscreen" target="_blank">B. Events <img src="./assets/icons/arrow-link-icon.svg"
+                        alt="Icon for the blank link"></a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>B. Amsterdam</h2>
+                <p>Rent your event space at B Amsterdam events</p>
+            </section>
+        </section>
+
+        <section class="two-columns">
+            <section>
+                <h3>Challenge</h3>
+                <p>I took on the challenge posed by Yeti Motion to enhance the <strong>accessibility</strong> of their website in a total of 3 weeks. 
+                    <br><br>
+                    The original website presented various accessibility issues, prompting me to craft a revamped version that not only addressed these concerns but also retained the <strong>flashy</strong> and <strong>dynamic</strong> elements of the original.</p>            
+            </section>
+
+            <section>
+                <h3>My part</h3>
+                <p>Leveraging <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, I reconstructed the site with a focus on <strong>semantic code</strong>, ensuring seamless readability for screen readers, that performs as <strong>flashy</strong> as the original one does.</p>
+            </section>
+        </section>
+
+        <section class="video">
+            <img src="./assets/images/B_2laptops.jpg"
+                        alt="The desktop dashboard for Robin Assistant on big screen for Ipad comparisson">
+        </section>
+
+        <section class="two-columns">
+            <section>
+                <h3>A semantic approach</h3>
+                <p>For the Yeti Motion website, I prioritized a semantic approach to coding. 
+                    In the HTML, I carefully structured a meaningful DOM using semantic elements for improved accessibility. 
+                    <br><br>
+                    The CSS was designed with semantic styles, promoting clarity and easy maintenance. 
+                    JavaScript components seamlessly integrated into the semantic structure, resolving accessibility issues while enhancing overall user experience. 
+                    <br><br>
+                    The result is a website that combines flashy design with a strong focus on accessibility and a well-organized codebase.</p>
+            </section>
+
+            <section>
+                <h3>How I made it accessible</h3>
+                <p>To achieve this, I utilized tags such as section, article, nav, header, footer, etc., to appropriately attribute the content. In link tags, I implemented aria labels, and image labels have well-crafted alt text.
+                    <br><br>
+
+                    CSS is composed with pseudo-classes, and I minimized the use of classes/ID's, primarily employing them for styling JavaScript elements on the site.
+                    <br><br>
+                    accessibility is optimised by making a light mode version, for people who prefer light mode on their personal device, and so is reduced motion included.</p>
+            </section>
+        </section>
+
+
+        <section class="video">
+            <video autoplay loop title="The hover effects on the about page of Yeti Motion">
+                <source src="./assets/videos/hovereffects.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+
+
+        <section class="two-columns">
+            <section>
+                <h3>Canvas</h3>
+                <p>In the original site, a specific section featured a unique effect that could only be replicated using a canvas tag. Despite being relatively new to working with canvas, I delved into the code terminal using NPM and libraries such as Node module WebGL + OGL to attempt and recreate a hover-over text effect.
+                    <br><br>
+                    Although the final result differed from the original, I successfully crafted something that exceeded my prior knowledge and capabilities.
+                </p>
+            </section>
+
+            <section>
+                <video autoplay loop title="The canvas element on the Yeti Motion about page">
+                    <source src="./assets/videos/canvas.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+        </section>
+
+        <section class="two-img">
+            <img src="./assets/images/B_1laptop.jpg"
+            alt="Yeti Motion's about page on an Iphone">
+            <img src="./assets/images/B_mockupinspace.jpg"
+            alt="Yeti Motion's about page on an android phone">
+        </section>
+
+
+        <section class="video">
+            <video autoplay loop title="The table that is filterable on the Yeti Motion about page">
+                <source src="./assets/videos/filter_table.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section class="two-columns">
+            <section>
+                <h3>Creating animated effects</h3>
+                <p>The pages feature a substantial amount of animated content, and I employed various methods to reconstruct these animations. 
+                    Clipping masks played a significant role, as demonstrated in the lightning bolt in the first section and the hoverable list navigation. 
+                    <br><br>
+                    In the case of the latter, I utilized the JavaScript API Intersection Observer to dynamically make it visible when entering that specific section.</p>
+            </section>
+
+            <section>
+                <h3><br><br></h3>
+                <p>Special effects triggered by clicks, such as those on the play button or the navigation menu, are implemented using toggle states in JavaScript. 
+                    The use of :root variables and calc() functions within the CSS significantly facilitated the creation of these effects. 
+                    <br><br>
+                    Additionally, the application of the TranslateZ() attribute proved to be instrumental in enhancing various sections of the content, as illustrated below.</p>
+            </section>
+        </section>
+
+        <section class="video">
+            <video autoplay loop title="The Rotatez() hover animation on the studiolife page of Yeti Motion">
+                <source src="./assets/videos/studiolife_hover.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+
+
+
+
+        <section class="more-projects">
+            <h2>Want to see some more?</h2>
+            <section>
+                <a href="./case-ontheborder.html">
+                    <div>
+                        <img src="./assets/images/ontheborder.jpg" alt="First screen of the project On The Border">
+                    </div>
+                    <div>
+                        <h3>On the Border</h3>
+                        <cite>Front End</cite>
+                        <cite>Visual Design</cite>
+                        <cite>UX Design</cite>
+                        <cite>Concept</cite>
+                    </div>
+                </a>
+            </section>
+
+
+            <section>
+                <a href="./case-robinassistant.html">
+                    <div>
+                        <img src="./assets/images/robinassistant_laptop.jpg" alt="The Robin Assistant dashboard on laptop">
+                    </div>
+                    <div>
+                        <h3>Robin Assistant</h3>
+                        <cite>UX Design</cite>
+                        <cite>Visual Design</cite>
+                        <cite>Front end</cite>
+                    </div>
+                </a>
+            </section>
+        </section>
 
 
     </main>
