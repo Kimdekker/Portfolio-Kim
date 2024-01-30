@@ -112,11 +112,47 @@ main>section:first-of-type section:nth-of-type(2){
     border-radius: var(--spacer);
 }
 
+.two-columns section ul{
+    padding-left: 1em;
+}
+
+.two-columns section ul li{
+    font-size: var(--fs-p);
+    font-family: var(--ff);
+    list-style-type: square;
+}
+
+
+.wheelchair{
+    animation: wheelie 3s ease-in-out infinite;
+}
+
+
+@keyframes wheelie {
+    0% {
+        transform: translatex(0px) rotate(-20deg) translateY(0px);
+    }
+
+    40% {
+        transform: translatex(-60px) rotate(10deg) translateY(-30px);
+    }
+
+    60% {
+        transform: translatex(-60px) rotate(10deg) translateY(-30px);
+    }
+
+    100% {
+        transform: translatex(0px) rotate(-20deg) translateY(0px);
+    }
+}
+
 
 /* BIG IMG/VIDEO SECTION */
 
 .video{
     padding: 0em 3em;
+    display: flex;
+    justify-content: center;
 }
 
 .video video, .video img{
@@ -135,6 +171,14 @@ main>section:first-of-type section:nth-of-type(2){
     width: 40%;
 }
 
+.gamesense-vid{
+    width: 80%!important;
+    text-align: center;
+}
+
+.ui-gs{
+    margin-top: var(--spacer-lg);
+}
 
 /* 2 IMG SECTION */
 
@@ -146,7 +190,7 @@ main>section:first-of-type section:nth-of-type(2){
 }
 
 .two-img img, video{
-    width: 100%;
+    width: 50%;
     height: max-content;
 }
 
@@ -294,10 +338,6 @@ main>section:first-of-type section:nth-of-type(2){
 /* MAX WIDTH: 1325px */
 
 @media only screen and (max-width: 1325px) {
-    main>section:nth-of-type(1) section a {
-        margin-top: -17em;
-    }
-
     .more-projects section a div:last-of-type h3 {
         font-size: clamp(1.8rem, 0.2286rem + 5.0286vw, 4rem);    
     }
@@ -375,6 +415,14 @@ main>section:first-of-type section:nth-of-type(2){
     .more-projects section a div:first-of-type img {
         width: 45vw;
         height: 45vw;
+    }
+
+    #robin-ipad img{
+        width: 100%;
+    }
+    
+    .gamesense-vid{
+        width: 100%!important;
     }
 
 }
