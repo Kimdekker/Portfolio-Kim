@@ -343,6 +343,7 @@ section:nth-of-type(2) section a div:last-of-type h3 {
     margin: 0em;
     padding: 0em;
     color: var(--bg-color);
+    font-size: clamp(2rem, 0.2143rem + 5.7143vw, 4.5rem);
 }
 
 section:nth-of-type(2) section a div:last-of-type h4 {
@@ -582,6 +583,15 @@ main>section:nth-of-type(3)>div>div .bordera a:focus img {
 @media only screen and (min-width: 1600px) {
     section:first-of-type h2 {
         width: 20%;
+    }
+}
+
+
+/* MAX WIDTH: 1325px */
+
+@media only screen and (max-width: 1325px) {
+    section:nth-of-type(2) section a div:last-of-type h3 {
+        font-size: clamp(1.8rem, 0.2286rem + 5.0286vw, 4rem);
     }
 }
 

@@ -133,6 +133,7 @@ main>section:nth-of-type(1) section a div:last-of-type h3 {
     margin: 0em;
     padding: 0em;
     color: var(--bg-color);
+    font-size: clamp(2rem, 0.2143rem + 5.7143vw, 4.5rem);
 }
 
 main>section:nth-of-type(1) section a div:last-of-type h4 {
@@ -319,6 +320,10 @@ main>section:last-of-type>div .bordera a:focus img {
     main>section:nth-of-type(1) section a {
         margin-top: -17em;
     }
+
+    main>section:nth-of-type(1) section a div:last-of-type h3 {
+        font-size: clamp(1.8rem, 0.2286rem + 5.0286vw, 4rem);
+    }
 }
 
 /* MAX WIDTH: 1100PX */
@@ -337,10 +342,6 @@ main>section:last-of-type>div .bordera a:focus img {
 
     main>section:nth-of-type(1) section a {
         margin-top: -12em;
-    }
-
-    main>section:nth-of-type(1) section a div:last-of-type h3 {
-        font-size: var(--fs-4);
     }
 
     main>section:nth-of-type(1) section a div:last-of-type h4 {
