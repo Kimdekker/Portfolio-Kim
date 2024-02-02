@@ -24,7 +24,7 @@ main>img {
 
 
 
-.video{
+.video {
     padding: var(--spacer-xl) 3em;
 }
 
@@ -155,11 +155,13 @@ main>section:nth-of-type(1) section a div:last-of-type cite {
 
 /* hover over section */
 
-main>section:nth-of-type(1) section a:hover div:last-of-type {
+main>section:nth-of-type(1) section a:hover div:last-of-type,
+main>section:nth-of-type(1) section a:focus div:last-of-type {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-main>section:nth-of-type(1) section a:hover div:first-of-type img {
+main>section:nth-of-type(1) section a:hover div:first-of-type img,
+main>section:nth-of-type(1) section a:focus div:first-of-type img {
     opacity: .2;
 }
 
@@ -207,7 +209,8 @@ main>section:nth-of-type(1) div .bordera {
     border-color: var(--txt-clr);
 }
 
-main>section:nth-of-type(1) div .bordera:hover {
+main>section:nth-of-type(1) div .bordera:hover,
+main>section:nth-of-type(1) div .bordera:focus {
     border-color: var(--txt-clr);
     margin-bottom: 2em;
 }
@@ -279,7 +282,8 @@ main>section:last-of-type>div .bordera a img {
     will-change: transform;
 }
 
-main>section:last-of-type>div .bordera a:hover img {
+main>section:last-of-type>div .bordera a:hover img,
+main>section:last-of-type>div .bordera a:focus img {
     transform: rotate(20deg);
 }
 
@@ -295,7 +299,7 @@ main>section:last-of-type>div .bordera a:hover img {
 /* FOR TOUCHSCREEN */
 
 @media (hover: none) {
-    main > section:nth-of-type(1) section a div:last-of-type {
+    main>section:nth-of-type(1) section a div:last-of-type {
         position: absolute;
         bottom: 0;
         padding: var(--spacer-md);
@@ -321,12 +325,12 @@ main>section:last-of-type>div .bordera a:hover img {
 
 
 @media only screen and (max-width: 1100px) {
-    main > section:nth-of-type(1) section a div:first-of-type {
+    main>section:nth-of-type(1) section a div:first-of-type {
         width: 43vw;
         padding-bottom: 42vw;
     }
 
-    main > section:nth-of-type(1) section a div:first-of-type img {
+    main>section:nth-of-type(1) section a div:first-of-type img {
         width: 43vw;
         height: 43vw;
     }
@@ -335,17 +339,17 @@ main>section:last-of-type>div .bordera a:hover img {
         margin-top: -12em;
     }
 
-    main > section:nth-of-type(1) section a div:last-of-type h3 {
+    main>section:nth-of-type(1) section a div:last-of-type h3 {
         font-size: var(--fs-4);
     }
 
-    main > section:nth-of-type(1) section a div:last-of-type h4 {
+    main>section:nth-of-type(1) section a div:last-of-type h4 {
         font-size: var(--fs-5);
 
     }
 
 
-    main > section:nth-of-type(1) section a div:last-of-type cite {
+    main>section:nth-of-type(1) section a div:last-of-type cite {
         font-size: 1em;
     }
 
@@ -363,20 +367,20 @@ main>section:last-of-type>div .bordera a:hover img {
         top: 50%;
     }
 
-    main > section:nth-of-type(1) {
+    main>section:nth-of-type(1) {
         margin: var(--spacer-xl) 1em;
     }
 
-    main > section:nth-of-type(1) .rightProject {
+    main>section:nth-of-type(1) .rightProject {
         width: calc(100vw - 3em);
     }
 
-    main > section:nth-of-type(1) section a div:first-of-type {
+    main>section:nth-of-type(1) section a div:first-of-type {
         width: 45vw;
         padding-bottom: 44vw;
     }
 
-    main > section:nth-of-type(1) section a div:first-of-type img {
+    main>section:nth-of-type(1) section a div:first-of-type img {
         width: 45vw;
         height: 45vw;
     }
@@ -399,27 +403,27 @@ main>section:last-of-type>div .bordera a:hover img {
         height: 40vh;
     }
 
-    main > section:nth-of-type(1) section a div:first-of-type {
+    main>section:nth-of-type(1) section a div:first-of-type {
         width: 92vw;
         padding-bottom: 91vw;
 
     }
 
-    main > section:nth-of-type(1) section a div:first-of-type img {
+    main>section:nth-of-type(1) section a div:first-of-type img {
         width: 92vw;
         height: 92vw;
     }
 
-    main > section:nth-of-type(1) section a {
+    main>section:nth-of-type(1) section a {
         margin-top: var(--spacer);
     }
 
-    main > section:nth-of-type(1) .rightProject {
+    main>section:nth-of-type(1) .rightProject {
         width: calc(100vw - 1.9em);
     }
 
 
-    main > section:nth-of-type(1) section a div:last-of-type cite {
+    main>section:nth-of-type(1) section a div:last-of-type cite {
         display: none;
     }
 
@@ -449,6 +453,3 @@ main>section:last-of-type>div .bordera a:hover img {
         width: 93vw;
     }
 }
-
-
-

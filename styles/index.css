@@ -365,11 +365,13 @@ section:nth-of-type(2) section a div:last-of-type cite {
 
 /* hover over section */
 
-section:nth-of-type(2) section a:hover div:last-of-type {
+section:nth-of-type(2) section a:hover div:last-of-type,
+section:nth-of-type(2) section a:focus div:last-of-type {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-section:nth-of-type(2) section a:hover div:first-of-type img {
+section:nth-of-type(2) section a:hover div:first-of-type img,
+section:nth-of-type(2) section a:focus div:first-of-type img {
     opacity: .2;
 }
 
@@ -417,7 +419,8 @@ section:nth-of-type(2) div .bordera {
     border-color: var(--txt-clr);
 }
 
-section:nth-of-type(2) div .bordera:hover {
+section:nth-of-type(2) div .bordera:hover,
+section:nth-of-type(2) div .bordera:focus {
     border-color: var(--txt-clr);
     margin-top: 2em;
 }
@@ -540,7 +543,8 @@ main>section:nth-of-type(3)>div>div .bordera a img {
     will-change: transform;
 }
 
-main>section:nth-of-type(3)>div>div .bordera a:hover img {
+main>section:nth-of-type(3)>div>div .bordera a:hover img,
+main>section:nth-of-type(3)>div>div .bordera a:focus img {
     transform: rotate(20deg);
 }
 
@@ -625,7 +629,7 @@ main>section:nth-of-type(3)>div>div .bordera a:hover img {
 /* MAX WIDTH: 1000PX */
 
 @media only screen and (max-width: 1000px) {
-    section:nth-of-type(2) section a{
+    section:nth-of-type(2) section a {
         margin-top: -12em;
     }
 }

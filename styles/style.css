@@ -12,7 +12,12 @@
     background: var(--primary-clr);
 }
 
-html{
+:focus-visible{
+    outline: 3px solid var(--primary-clr);
+}
+  
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -113,7 +118,7 @@ html{
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 5s;
+    animation-duration: 5s;
 }
 
 
@@ -160,26 +165,27 @@ h6 {
     font-size: var(--fs-6);
 }
 
-p, td {
+p,
+td {
     font-family: var(--ff);
     color: var(--txt-clr);
     font-size: var(--fs-p);
     font-weight: var(--fw-n);
 }
 
-p strong{
+p strong {
     font-weight: var(--fw-n);
     display: inline-block;
     position: relative;
-    
+
     &:before {
         content: '';
-        position:absolute;
-        width:100%;
-        height:100%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
         border-color: transparent transparent #6647f06b transparent;
-        border-style:solid;
-        border-width:3px;
+        border-style: solid;
+        border-width: 3px;
         transform: rotate(-1deg);
         margin-top: 2px;
     }
@@ -219,14 +225,8 @@ div a {
 }
 
 
-div.bordera:hover {
-    border: 2px solid var(--primary-clr);
-    border-width: 0px 2px 0px 2px;
-    padding: 8px;
-    margin: 0px -8px 0px -8px;
-}
-
-div.bordera:hover {
+div.bordera:hover,
+div.bordera:focus {
     border: 2px solid var(--primary-clr);
     border-width: 0px 2px 0px 2px;
     padding: 8px;
@@ -283,7 +283,7 @@ body {
     overflow-x: hidden;
 }
 
-main{
+main {
     overflow-x: hidden;
 }
 
@@ -779,7 +779,8 @@ footer div {
     align-items: center;
 }
 
-footer div:hover>ul {
+footer div:hover>ul,
+footer div:focus>ul {
     animation-play-state: paused;
 
 }
@@ -803,7 +804,8 @@ footer div>ul li {
     text-transform: uppercase;
 }
 
-footer div>ul li a:hover {
+footer div>ul li a:hover,
+footer div>ul li a:focus {
     transform: scale(1.1);
 }
 
@@ -857,7 +859,7 @@ footer section:nth-of-type(2) ul li {
 }
 
 
-footer section:nth-of-type(2) ul li a{
+footer section:nth-of-type(2) ul li a {
     padding: .7em;
     display: flex;
     justify-content: center;
@@ -870,7 +872,7 @@ footer section:nth-of-type(2) ul li a img {
 
 
 
-footer section:nth-of-type(2) ul li:nth-of-type(3) a img{
+footer section:nth-of-type(2) ul li:nth-of-type(3) a img {
     margin-top: -2px;
     margin-bottom: 2px;
 }

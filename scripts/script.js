@@ -8,13 +8,13 @@ document.body.addEventListener("mousemove", function (e) {
 
 
 //Loader
-window.addEventListener('load', function() {
-    const loaderWrapper = document.querySelector('.loader-wrapper');
+window.addEventListener('load', function () {
+  const loaderWrapper = document.querySelector('.loader-wrapper');
 
-    // Simulate loading time (in this case, 2.1 seconds)
-    setTimeout(function() {
-        loaderWrapper.classList.add('loaded');
-    }, 2100);
+  // Simulate loading time (in this case, 2.1 seconds)
+  setTimeout(function () {
+    loaderWrapper.classList.add('loaded');
+  }, 2100);
 });
 
 
@@ -27,23 +27,23 @@ darkModeSwitch.onclick = switchTheme;
 
 // Check local storage for dark mode preference on page load
 if (localStorage.getItem('darkMode') === 'enabled') {
-    document.body.classList.add('darkmode');
-    document.querySelector('header nav ul li:nth-of-type(2) button img').classList.add('upsidedown');
+  document.body.classList.add('darkmode');
+  document.querySelector('header nav ul li:nth-of-type(2) button img').classList.add('upsidedown');
 }
 
 function switchTheme() {
-    var bodySwitchColor = document.querySelector('body');
-    var iconDarkmode = document.querySelector('header nav ul li:nth-of-type(2) button img');
+  var bodySwitchColor = document.querySelector('body');
+  var iconDarkmode = document.querySelector('header nav ul li:nth-of-type(2) button img');
 
-    bodySwitchColor.classList.toggle('darkmode');
-    iconDarkmode.classList.toggle('upsidedown');
+  bodySwitchColor.classList.toggle('darkmode');
+  iconDarkmode.classList.toggle('upsidedown');
 
-    // Update local storage to reflect dark mode preference
-    if (bodySwitchColor.classList.contains('darkmode')) {
-        localStorage.setItem('darkMode', 'enabled');
-    } else {
-        localStorage.setItem('darkMode', 'disabled');
-    }
+  // Update local storage to reflect dark mode preference
+  if (bodySwitchColor.classList.contains('darkmode')) {
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    localStorage.setItem('darkMode', 'disabled');
+  }
 }
 
 
@@ -237,8 +237,3 @@ window.addEventListener('scroll', () => {
     addrightSwing = false;
   }
 });
-
-
-
-
-

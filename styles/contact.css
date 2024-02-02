@@ -16,7 +16,7 @@ main>h1 {
 /* Right left columns */
 /*********************/
 
-main > section{
+main>section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacer-lg);
@@ -25,17 +25,17 @@ main > section{
 
 /* First section */
 
-main > section h2{
+main>section h2 {
     margin: 0em;
 }
 
-main > section > section:first-of-type{
+main>section>section:first-of-type {
     display: flex;
     align-items: center;
 }
 
 
-main > section > section:first-of-type img{
+main>section>section:first-of-type img {
     width: 100%;
     animation: float 3s ease-in-out infinite;
 }
@@ -56,57 +56,59 @@ main > section > section:first-of-type img{
 }
 
 
-main > section > section:nth-of-type(2){
+main>section>section:nth-of-type(2) {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-main > section > section:nth-of-type(2) h2{
-    font-size: clamp(2rem, 0.6364rem + 5.8182vw, 5rem);}
+main>section>section:nth-of-type(2) h2 {
+    font-size: clamp(2rem, 0.6364rem + 5.8182vw, 5rem);
+}
 
-main > section > section:nth-of-type(2) div{
+main>section>section:nth-of-type(2) div {
     width: max-content;
     margin-top: var(--spacer-lg);
 }
 
-main > section > section:nth-of-type(2)>p{
+main>section>section:nth-of-type(2)>p {
     margin: 1em 0em .3em 0em;
 }
 
-main > section > section:nth-of-type(2) div:hover{
+main>section>section:nth-of-type(2) div:hover,
+main>section>section:nth-of-type(2) div:focus {
     margin: 1.9em 0em 1.1em -.5em;
 }
 
-main > section > section:nth-of-type(2)>a{
+main>section>section:nth-of-type(2)>a {
     font-family: var(--ff);
     font-size: var(--fs-p);
 }
 
 
-main > section > section:nth-of-type(2) > section h3{
+main>section>section:nth-of-type(2)>section h3 {
     font-size: var(--fs-6);
     margin-top: var(--spacer-lg);
 }
 
-main > section > section:nth-of-type(2) > section ul {
+main>section>section:nth-of-type(2)>section ul {
     display: flex;
     gap: var(--spacer);
 }
 
-main > section > section:nth-of-type(2) > section ul li {
+main>section>section:nth-of-type(2)>section ul li {
     background-color: var(--txt-clr);
     border-radius: 2em;
 }
 
 
-main > section > section:nth-of-type(2) > section ul li a{
+main>section>section:nth-of-type(2)>section ul li a {
     padding: .7em;
     display: flex;
     justify-content: center;
 }
 
-main > section > section:nth-of-type(2) > section ul li a img {
+main>section>section:nth-of-type(2)>section ul li a img {
     mix-blend-mode: difference;
     width: 1.5em;
 }
@@ -125,7 +127,7 @@ main > section > section:nth-of-type(2) > section ul li a img {
         margin-top: 0em;
     }
 
-    main > div > aside > nav > ul{
+    main>div>aside>nav>ul {
         width: 95vw;
     }
 
@@ -136,11 +138,11 @@ main > section > section:nth-of-type(2) > section ul li a img {
 
 
 @media only screen and (max-width: 750px) {
-    main > section{
+    main>section {
         grid-template-columns: 1fr;
     }
 
-    main > section > section:first-of-type img{
+    main>section>section:first-of-type img {
         width: 50%;
         margin-top: 1em;
         margin-bottom: -2em;
