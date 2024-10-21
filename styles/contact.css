@@ -64,21 +64,17 @@ main>section>section:nth-of-type(2) {
 
 main>section>section:nth-of-type(2) h2 {
     font-size: clamp(2rem, 0.6364rem + 5.8182vw, 5rem);
+    margin-bottom: 30px;
 }
 
 main>section>section:nth-of-type(2) div {
     width: max-content;
-    margin-top: var(--spacer-lg);
 }
 
 main>section>section:nth-of-type(2)>p {
     margin: 1em 0em .3em 0em;
 }
 
-main>section>section:nth-of-type(2) div:hover,
-main>section>section:nth-of-type(2) div:focus {
-    margin: 1.9em 0em 1.1em -.5em;
-}
 
 main>section>section:nth-of-type(2)>a {
     font-family: var(--ff);

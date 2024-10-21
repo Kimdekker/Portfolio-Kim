@@ -262,12 +262,12 @@ main>section:last-of-type>div p {
     color: var(--bg-color);
     font-weight: var(--fw-t);
     text-align: center;
+    margin-bottom: var(--spacer-md);
 }
 
 main>section:last-of-type>div .bordera {
     width: max-content;
     border-color: var(--bg-color);
-    margin-top: var(--spacer-md);
 }
 
 main>section:last-of-type>div .bordera a {
