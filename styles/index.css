@@ -406,13 +406,16 @@ section:nth-of-type(2) .rightProject a {
     width: max-content;
 }
 
+section:nth-of-type(2) .leftProject:last-of-type {
+    margin-bottom: 5em;
+}
+
 
 
 /* Button to all projects */
 section:nth-of-type(2) div {
     display: flex;
     justify-content: center;
-    margin-top: var(--spacer-md);
 }
 
 section:nth-of-type(2) div .bordera {
@@ -423,7 +426,6 @@ section:nth-of-type(2) div .bordera {
 section:nth-of-type(2) div .bordera:hover,
 section:nth-of-type(2) div .bordera:focus {
     border-color: var(--txt-clr);
-    margin-top: 2em;
 }
 
 section:nth-of-type(2) div .bordera a {
@@ -523,12 +525,12 @@ main>section:nth-of-type(3)>div>div h3 {
 main>section:nth-of-type(3)>div>div p {
     color: var(--bg-color);
     font-weight: var(--fw-t);
+    margin-bottom: var(--spacer-md);
 }
 
 main>section:nth-of-type(3)>div>div .bordera {
     width: max-content;
     border-color: var(--bg-color);
-    margin-top: var(--spacer-md);
 }
 
 main>section:nth-of-type(3)>div>div .bordera a {
@@ -676,6 +678,8 @@ main>section:nth-of-type(3)>div>div .bordera a:focus img {
     }
 
 }
+
+
 
 
 /* MAX WIDTH: 750PX */

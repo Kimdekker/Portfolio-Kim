@@ -225,12 +225,12 @@ div a {
 }
 
 
-div.bordera:hover,
-div.bordera:focus {
+.bordera:hover,
+.bordera:focus {
     border: 2px solid var(--primary-clr);
     border-width: 0px 2px 0px 2px;
     padding: 8px;
-    margin: 0px -8px 0px -8px;
+    margin: -8px -8px 8px -8px;
 }
 
 
