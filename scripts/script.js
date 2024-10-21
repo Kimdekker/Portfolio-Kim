@@ -67,59 +67,6 @@ function foldMenu() {
 
 
 
-//Observer for projects
-
-//FIRST
-const flyInUnder = document.querySelector('.projectOne');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-observer.observe(flyInUnder);
-
-
-
-//SECOND
-const flyInUnderScd = document.querySelector('.projectTwo');
-const observerScd = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observerScd.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-observerScd.observe(flyInUnderScd);
-
-
-
-//THIRD
-const flyInUnderTrd = document.querySelector('.projectThree');
-const observerTrd = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observerTrd.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.2
-});
-
-observerTrd.observe(flyInUnderTrd);
-
-
-
 //Observer for the brain
 
 const brain = document.querySelector('.brain');
@@ -147,6 +94,9 @@ window.addEventListener('scroll', () => {
     addedClass = false;
   }
 });
+
+
+
 
 
 //Observer for H2 of homepage intro
