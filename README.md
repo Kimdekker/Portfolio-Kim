@@ -7,6 +7,6 @@ Take a look if you're interested
 - Kim Dekker [Github](https://github.com/Kimdekker/)
 
 
-## Licentie
+## Licence
 
 This project is provided under the [MIT](/LICENSE) License
