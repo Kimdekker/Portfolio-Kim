@@ -108,7 +108,8 @@ main>section:nth-of-type(1) section a div:first-of-type {
     padding-bottom: 44vw;
 }
 
-main>section:nth-of-type(1) section a div:first-of-type img {
+main>section:nth-of-type(1) section a div:first-of-type img, 
+main>section:nth-of-type(1) section a div:first-of-type video {
     border-radius: 2em;
     transition: 0.6s ease-in-out;
     will-change: transform;
@@ -162,7 +163,9 @@ main>section:nth-of-type(1) section a:focus div:last-of-type {
 }
 
 main>section:nth-of-type(1) section a:hover div:first-of-type img,
-main>section:nth-of-type(1) section a:focus div:first-of-type img {
+main>section:nth-of-type(1) section a:focus div:first-of-type img,
+main>section:nth-of-type(1) section a:hover div:first-of-type video,
+main>section:nth-of-type(1) section a:focus div:first-of-type video {
     opacity: .2;
 }
 
@@ -171,7 +174,8 @@ main>section:nth-of-type(1) section a:focus div:last-of-type {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-main>section:nth-of-type(1) section a:focus div:first-of-type img {
+main>section:nth-of-type(1) section a:focus div:first-of-type img,
+main>section:nth-of-type(1) section a:focus div:first-of-type video {
     opacity: .2;
 }
 
@@ -188,7 +192,8 @@ main>section:nth-of-type(1) .rightProject {
 }
 
 main>section:nth-of-type(1) .rightProject a,
-section:nth-of-type(2) .rightProject img {
+section:nth-of-type(2) .rightProject img, 
+section:nth-of-type(2) .rightProject video {
     width: max-content;
 }
 
@@ -223,7 +228,8 @@ main>section:nth-of-type(1) div .bordera a {
 
 
 
-main>section:nth-of-type(1) div .bordera a img {
+main>section:nth-of-type(1) div .bordera a img,
+main>section:nth-of-type(1) div .bordera a video {
     width: 12%;
     mix-blend-mode: difference;
 }
@@ -335,7 +341,8 @@ main>section:last-of-type>div .bordera a:focus img {
         padding-bottom: 42vw;
     }
 
-    main>section:nth-of-type(1) section a div:first-of-type img {
+    main>section:nth-of-type(1) section a div:first-of-type img,
+    main>section:nth-of-type(1) section a div:first-of-type video {
         width: 43vw;
         height: 43vw;
     }
@@ -381,7 +388,8 @@ main>section:last-of-type>div .bordera a:focus img {
         padding-bottom: 44vw;
     }
 
-    main>section:nth-of-type(1) section a div:first-of-type img {
+    main>section:nth-of-type(1) section a div:first-of-type img,
+    main>section:nth-of-type(1) section a div:first-of-type video {
         width: 45vw;
         height: 45vw;
     }
@@ -410,7 +418,8 @@ main>section:last-of-type>div .bordera a:focus img {
 
     }
 
-    main>section:nth-of-type(1) section a div:first-of-type img {
+    main>section:nth-of-type(1) section a div:first-of-type img,
+    main>section:nth-of-type(1) section a div:first-of-type video {
         width: 92vw;
         height: 92vw;
     }
