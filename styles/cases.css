@@ -318,6 +318,10 @@ main>section:last-of-type>div .bordera a:focus img {
         width: 100%;
     }
 
+    main>section:nth-of-type(1) section a div:last-of-type h3 {
+        color: #FFFBF4;
+    }
+
 }
 
 /* MAX WIDTH: 1325px */
