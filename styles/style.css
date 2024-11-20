@@ -649,6 +649,33 @@ header nav:nth-of-type(2) button:focus span:nth-of-type(2).leave {
     width: 0%;
 }
 
+.imgRight {
+    object-fit: cover;
+    object-position: 100% 100%;
+}
+
+.movingImg {
+    animation: movingImg 30s ease-in-out infinite;
+}
+
+@keyframes movingImg {
+    0% {
+        object-position: 100% 100%;
+    }
+
+    50% {
+        object-position: 0% 100%;
+    }
+
+    100% {
+        object-position: 100% 100%;
+    }
+}
+
+.longTitle {
+    font-size: clamp(2.5rem, 0.6667rem + 4.2667vw, 4rem) !important;
+}
+
 
 
 /* Menu behind button */
