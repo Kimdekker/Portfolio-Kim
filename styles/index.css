@@ -311,7 +311,7 @@ section:nth-of-type(2) section:first-of-type a {
 /* container for the image */
 section:nth-of-type(2) section a div:first-of-type {
     position: relative;
-    background-color: var(--txt-clr-hds);
+    background-color: #171614;
     border-radius: 2em;
     width: 45vw;
     height: 0vh;
@@ -343,7 +343,7 @@ section:nth-of-type(2) section a div:last-of-type {
 section:nth-of-type(2) section a div:last-of-type h3 {
     margin: 0em;
     padding: 0em;
-    color: var(--bg-color);
+    color: #FFFBF4;
     font-size: clamp(2rem, 0.2143rem + 5.7143vw, 4.5rem);
 }
 
